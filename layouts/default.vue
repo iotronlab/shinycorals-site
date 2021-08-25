@@ -1,14 +1,9 @@
 <template>
   <div>
     <div id="navbar">
-      <div class="navbar-links">
-      <nuxt-link to="/about">ABOUT US</nuxt-link>
-      <nuxt-link to="/classprogram">CLASSROOM PROGRAMMES</nuxt-link>
-      <nuxt-link to="/gallery">GALLERY</nuxt-link>
-      <nuxt-link to="/contactus">CONTACT US</nuxt-link>
-      <nuxt-link to="/notice">NOTICES</nuxt-link>
-      </div>
+      <nuxt-link v-for="title in titles" :key="title">{{title}}</nuxt-link>
     </div>
+
     <div id="default-body">
       <nuxt />
     </div>
@@ -19,13 +14,21 @@
   </div>
 </template>
 
+<script >
 
-
-
+export default {
+ data()
+ {
+   return{
+     titles:['ABOUT US','CLASSROOM PROGRAMMES','GALLERY','CONTACT US','NOTICES']
+   }
+ }
+}
+</script>
 
 <style scoped>
 #navbar{
-background-color: black;
+/* background-color: black; */
 height: 60px;
 }
 #navbar .navbar-links{

@@ -13,24 +13,32 @@
             </v-col>
         </v-row>
 
-        <v-row no-gutters v-for="(service, i) in services" :key="i" justify="center" class="mb-6">
-            <v-col cols="12" lg="3" class="right">
-                <v-row no-gutters>
-                    <h1 contain class="ma-2 text-h1"> {{ service.number}} </h1>
-                </v-row>
-            </v-col>
-            <v-col cols="12" lg="8" class="right" :order-lg="i % 2 == 0 ? 'first' : null">
-                <h1 class="text-h4 mb-4 primary--text">{{ service.heading }}</h1>
-                <h2> {{service.description}} </h2>
-            </v-col>
-        </v-row>
+        <div>
 
-        <v-row>
-            <c-col cols="12" lg="11">
-                <h1> {{ heading }} </h1>
+            <v-timeline :reverse="reverse" dense>
+                <v-timeline-item v-for="(service, i) in services" :key="i">
+
+                    <v-card class="elevation-2">
+                        <v-card-title class="text-h5 head">
+                            {{ service.heading }}
+                        </v-card-title>
+                        <v-card-text class="body">
+                            {{service.description}}
+                        </v-card-text>
+                    </v-card>
+                </v-timeline-item>
+            </v-timeline>
+        </div>
+        <v-card>
+            <v-card-title class="text-h5 head">
+                {{ heading }}
+            </v-card-title>
+
+            <v-card-subtitle class="body">
                 <h3> {{ description }} </h3>
-            </c-col>
-        </v-row>
+            </v-card-subtitle>
+        </v-card>
+
         <v-row>
             <v-col cols="12" lg="11">
 
@@ -39,43 +47,61 @@
         <h1> OUR UNIQUE APPROACH</h1>
         <v-row>
             <v-col v-for="service in services1" :key="service" cols="11" lg="4">
-                {{ service.heading }}
-                {{service.description}}
+                <v-card>
+                    <v-card-title class="text-h5 head">
+                        {{ service.heading }}
+                    </v-card-title>
 
+                    <v-card-subtitle class="body">
+                        <h3>{{service.description}}</h3>
+                    </v-card-subtitle>
+
+                    <v-row>
+                        <v-col v-for="data in service.children" :key="data" cols="11" lg="11">
+
+                            <ul>
+                                <li>{{data.sub}}</li>
+                            </ul>
+
+
+                        </v-col>
+                    </v-row>
+                </v-card>
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="11" lg="4">
-                <h1>Our Gallery</h1>
-                <h3>These are the pictures from our school and field trips.Don't forget to check our entire gallery! </h3>
-                <v-btn depressed>View All </v-btn>
-            </v-col>
-            <v-col cols="11" lg="8" class="purple darken-2">
+                <v-card>
+                    <v-card-title class="head">
+                        Our Gallery
+                    </v-card-title>
+                    <v-card-subtitle class="body">
+                        <h3>These are the pictures from our school and field trips.Don't forget to check our entire gallery!</h3>
+                        <v-btn class="btn">View All </v-btn>
+                    </v-card-subtitle>
+                </v-card>
+
             </v-col>
         </v-row>
         <v-row>
             <v-col>
                 <v-row>
                     <h1 class="mx-5">Our Achievements</h1>
-                 </v-row>
-                    <v-row>
-                        <v-col v-for="service in achievements" :key="service" cols="11" lg="3">
+                </v-row>
+                <v-row v-for="service in achievements" :key="service" >
+                    <v-col v-for="service1 in service.img" :key="service1" cols="11" lg="3" class="imgcol" >
+                            <v-img :src="service1.src"  class="ma-2 image" />
+                        <h1> {{service.number}}</h1>
+                        <h3 class="archi">{{service.title}}</h3>
 
-                         <h1 >   {{service.number}}</h1>
-                            <h3 class="archi">{{service.title}}</h3>
-
-                        </v-col>
-                    </v-row>
-
-                <v-row style="height: 200px;" class="purple darken-2">
-
+                    </v-col>
                 </v-row>
             </v-col>
         </v-row>
         <h1 class="red mt-5">F.A.Q (FREQUENTLY ASKED QUESTIONS)</h1>
         <v-expansion-panels>
             <v-expansion-panel v-for="service in faq" :key="service" cols="12" lg="11">
-                <v-expansion-panel-header>
+                <v-expansion-panel-header class="head">
                     {{ service.question }}
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
@@ -92,8 +118,14 @@
         </v-row>
         <v-row>
             <v-col v-for="service in footer" :key="service" cols="11" lg="4">
-                {{ service.heading }}
-                {{service.description}}
+                <v-card>
+                    <v-card-title class="head">
+                        {{ service.heading }}
+                    </v-card-title>
+                    <v-card-sub-title class="body">
+                        {{service.description}}
+                    </v-card-sub-title>
+                </v-card>
 
             </v-col>
         </v-row>
@@ -107,7 +139,8 @@ export default {
     methods: {},
     data() {
         return {
-            services: [{
+            services: [
+                {
                     heading: 'COMMUNICATION AND LANGUAGE',
                     description: `Children are encouraged to extend their vocabulary and fluency by talking, listening and responding to stories, songs and rhymes in small and large groups.  Children learn the purpose of writing and how to draw and write symbols for themselves.  Children are encouraged to give their attention to what others say and respond appropriately.  Children are also encouraged to follow simple instructions and answer ‘how’ and ‘why’ questions at group discussions.`,
                     number: 1,
@@ -159,41 +192,88 @@ export default {
                 Our Teachers are well trained educators and having fair experience in education sectors. Our teaching Assistants are well groomed and very well behaved which will win hearts of our children. Our staffs are always helpful via conferences and monthly meetings throughout the school year.`,
             services1: [{
                     heading: 'What Makes US different?',
-                    description: `We, at Shiny Corals PreSchool, believe education must come in a colourful and playful manner. Kids learn things easily when anything is taught through activities. Considering the possibilities of the tender age that our kids are at, we designed a curriculum full of both indoor and outdoor activities. Shiny Corals Preschool will provide Internet (World Wide Web) or an intranet. Early writing, reading and number work are all done in the context of play and exercise books and copies, which are as nominal as could be possible.
-
-                    Activities throughout the year as per calender programs and as per academics.
-                    Field trips for Nursery, Jr. KG and Sr. KG classes to make kids street smart.
-                    Smart Digital class with curriculum based content to make kids smart class ready for future.
-                    Good teacher-student ratio to concentrate on every student equally.
-                    Qualified and experienced teachers.
-                    Strong study materials with renowned publishing house.
-                    Small library for story time to encourage student for reading habits.
-                    AC classrooms with plenty of natural light.`,
+                    description: `We, at Shiny Corals PreSchool, believe education must come in a colourful and playful manner. Kids learn things easily when anything is taught through activities. Considering the possibilities of the tender age that our kids are at, we designed a curriculum full of both indoor and outdoor activities. Shiny Corals Preschool will provide Internet (World Wide Web) or an intranet. Early writing, reading and number work are all done in the context of play and exercise books and copies, which are as nominal as could be possible.`,
+                    children: [{
+                            sub: ' Activities throughout the year as per calender programs and as per academics.',
+                        },
+                        {
+                            sub: 'Field trips for Nursery, Jr. KG and Sr. KG classes to make kids street smart.',
+                        },
+                        {
+                            sub: 'Smart Digital class with curriculum based content to make kids smart class ready for future.',
+                        },
+                        {
+                            sub: ' Good teacher-student ratio to concentrate on every student equally.',
+                        },
+                        {
+                            sub: ' Qualified and experienced teachers.',
+                        },
+                        {
+                            sub: 'Strong study materials with renowned publishing house.',
+                        },
+                        {
+                            sub: 'Small library for story time to encourage student for reading habits.',
+                        },
+                        {
+                            sub: ' AC classrooms with plenty of natural light.',
+                        },
+                    ],
                 },
                 {
                     heading: 'Learning through Play',
-                    description: `Learning through play is important as this is the natural way that children learn. Sometimes their play will be boisterous; sometimes they will describe and discuss what they are doing. Sometimes they will be quiet and reflective as they play. At the Pre-School we create a challenging environment and support children’s learning through planned play activities. We value, support and extend children’s spontaneous play, extending and developing their language and communication during their play. Through different forms of play and field trips the children can:
-
-                    Explore, develope and go through learning experiences that help them make sense of the world.
-                    Practise and build up ideas, concepts and skills.
-                    Learn how to control impulses and understand the need for rules.
-                    Be alone, be alongside others, or cooperate as they talk or rehearse their feelings.
-                    Take risks and make mistakes.
-                    Think creatively and imaginatively.
-                    Communicate with others as they investigate or solve problems.
-                    Express fears or re-live anxious experiences in controlled and safe situations`,
+                    description: `Learning through play is important as this is the natural way that children learn. Sometimes their play will be boisterous; sometimes they will describe and discuss what they are doing. Sometimes they will be quiet and reflective as they play. At the Pre-School we create a challenging environment and support children’s learning through planned play activities. We value, support and extend children’s spontaneous play, extending and developing their language and communication during their play. Through different forms of play and field trips the children can`,
+                    children: [{
+                            sub: 'Explore, develope and go through learning experiences that help them make sense of the world.',
+                        },
+                        {
+                            sub: 'Practise and build up ideas, concepts and skills.',
+                        },
+                        {
+                            sub: 'Learn how to control impulses and understand the need for rules.',
+                        },
+                        {
+                            sub: 'Be alone, be alongside others, or cooperate as they talk or rehearse their feelings.',
+                        },
+                        {
+                            sub: 'Take risks and make mistakes.',
+                        },
+                        {
+                            sub: ' Think creatively and imaginatively.',
+                        },
+                        {
+                            sub: 'Communicate with others as they investigate or solve problems.',
+                        },
+                        {
+                            sub: 'Express fears or re-live anxious experiences in controlled and safe situations',
+                        },
+                    ]
                 },
                 {
                     heading: 'Our Vision',
-                    description: `Equipped with a well researched curriculum based on the seven areas of learning, our grand vision is for our children to grow up into responsible individuals and
+                    description: `Equipped with a well researched curriculum based on the seven areas of learning, our grand vision is for our children to grow up into responsible individuals and:`,
+                    children: [{
+                            sub: 'To enhance the development and education of children under school age in a way that involves parents.',
+                        },
+                        {
+                            sub: 'To provide a safe, secure and stimulating environment which offers a range of challenging and well structured experiences that meet the needs of young children.',
+                        },
+                        {
+                            sub: 'To enable children to learn and develop skills, attitudes, and understanding appropriate to their stage of development, and to build on what he or she can already do.',
+                        },
+                        {
+                            sub: 'To create an atmosphere in which children feel valued, confident, and where they are motivated, become independent and learn how to socialise with other children and adults.',
+                        },
+                        {
+                            sub: 'To ensure that children have equal access to the curriculum.',
+                        },
+                        {
+                            sub: 'To enable children to make progress according to their developing abilities, irrespective of their gender, ethnic, religious, social background, or additional support needs.',
+                        },
+                        {
+                            sub: 'To support parents and direct ways to find out possilibilities of their children.',
+                        },
 
-                    To enhance the development and education of children under school age in a way that involves parents.
-                    To provide a safe, secure and stimulating environment which offers a range of challenging and well structured experiences that meet the needs of young children.
-                    To enable children to learn and develop skills, attitudes, and understanding appropriate to their stage of development, and to build on what he or she can already do.
-                    To create an atmosphere in which children feel valued, confident, and where they are motivated, become independent and learn how to socialise with other children and adults.
-                    To ensure that children have equal access to the curriculum.
-                    To enable children to make progress according to their developing abilities, irrespective of their gender, ethnic, religious, social background, or additional support needs.
-                    To support parents and direct ways to find out possilibilities of their children.`,
+                    ]
                 },
             ],
             faq: [{
@@ -264,12 +344,12 @@ export default {
                 },
             ],
             media: [{
-                    //  img:  ,
+
                     title: 'LIKE OUR PAGE'
                 },
                 {
-                    //  img:  ,
-                    title: 'CONTACT US <br /> <input type="text" <br /> We never spam!',
+
+                    title: 'CONTACT US ',
                 },
                 {
                     //  img: ,
@@ -290,22 +370,22 @@ export default {
                 }
             ],
             achievements: [{
-                    url: './assets/image/loader.webp',
+                    img: [{ src: require('@/assets/image/girl.png') }],
                     number: 520,
                     title: 'NUMBER OF CHILDREN',
                 },
                 {
-                    url: './assets/image/teacher.png',
+                    img: [{ src: require('@/assets/image/teacher.png') }],
                     number: 700,
                     title: 'EXPERIENCED TEACHERS',
                 },
                 {
-                    url: './assets/image/family.png',
+                    img: [{ src: require('@/assets/image/family.png') }],
                     number: 180,
                     title: 'SATISFIED PARENTS',
                 },
                 {
-                    url: './assets/image/presentation.png',
+                    img: [{ src: require('@/assets/image/presentation.png') }],
                     number: 59,
                     title: 'CLASSES CONDUCTED',
                 },
@@ -338,7 +418,32 @@ h1 {
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
 }
-.archi{
-  margin-bottom: 2px;
+
+.archi {
+    margin-bottom: 2px;
+}
+
+.head {
+    background-color: aquamarine;
+    color: black;
+}
+
+.body {
+    margin-top: 5px;
+}
+
+.avatar {
+    background-color: brown;
+}
+
+.btn {
+    color: black;
+}
+.image{
+    height: 50px;
+    width: 50px;
+}
+.imgcol{
+    display: flex;
 }
 </style>

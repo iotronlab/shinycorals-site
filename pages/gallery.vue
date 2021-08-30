@@ -3,7 +3,7 @@
 
     <v-container fluid>
         <v-sheet class="mt-n16" width="100%" color="transparent">
-            <video autoplay muted loop playsinline class="landing-video" :poster="require('@/assets/image/loader.webp')">
+            <video autoplay muted loop playsinline class="landing-video" :poster="require('@/assets/image/download.png')">
                 <source src="@/assets/image/Gravity.mp4" type="video/mp4" />
             </video>
         </v-sheet>

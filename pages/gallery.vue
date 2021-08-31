@@ -9,8 +9,52 @@
         </v-sheet>
     </v-container>
     <!-- <img src="@/assets/image/1.jpeg"> -->
+    <div class="text-center bg-model">
+        <v-dialog v-model="dialog" width="500" >
+            <template v-slot:activator="{ on, attrs }">
+
+                <v-row>
+                    <v-col cols="12" lg="4" class="colm" v-for="image in gallery" :key="image">
+                        <v-img :src="image.img" class="ma-2 image" v-bind="attrs" v-on="on" />
+                    </v-col>
+                </v-row>
+            </template>
+            <v-btn color="white" class="btn bg-mode close" dark dense text @click="dialog = false">
+                <p> x </p>
+            </v-btn>
+            <v-card>
+                <v-card-title class="text-h5 grey lighten-2">
+
+                    <v-carousel height="500" hide-delimiter-background show-arrows-on-hover >
+                        <v-carousel-item v-for="(slide, i) in gallery" :key="i">
+                            <!-- <v-sheet :color="colors[i]" height="100%"> -->
+                            <v-row class="fill-height" align="center" justify="center">
+                                <div>
+                                    <v-img :src="slide.img" class="ma-2 image" height="100%" />
+                                </div>
+                            </v-row>
+                            <!-- </v-sheet> -->
+                        </v-carousel-item>
+                    </v-carousel>
+
+                </v-card-title>
+
+                <v-divider></v-divider>
+
+            </v-card>
+            <!-- <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="white" class="btn" dark dense text @click="dialog = false">
+                    I accept
+                </v-btn>
+                <v-btn color="white" class="btn" dark dense text v-on:click="close()">
+                    click me
+                </v-btn>
+            </v-card-actions> -->
+        </v-dialog>
+    </div>
     <!-- first method -->
-    <div>
+    <!-- <div>
         <v-card>
             <v-row>
                 <v-col cols="12" lg="4" class="colm" v-for="image in gallery" :key="image">
@@ -18,16 +62,25 @@
                 </v-col>
             </v-row>
         </v-card>
-    </div>
+    </div> -->
     <!-- <h1>Second type</h1> -->
     <!-- Second method -->
-    <br>
 
 </v-main>
 </template>
 
 <script>
+// document.querySelector('.bg-model').style.display ='flex';
+// document.querySelector('.close').addEventListener('click', function(){
+//   document.querySelector('.bg-model').style.display = 'none';
+// })
 export default {
+    methods: {
+        close() {
+            // alert("function called");
+            this.dialog = "false";
+        }
+    },
     data() {
         return {
             // src: require('@/assets/image/1.jpeg')
@@ -122,4 +175,12 @@ image {
     height: 10px;
     width: 10px;
 }
+
+.btn {
+    color: white;
+    background-color: rgb(61, 122, 138);
+    width: 10px;
+    font-size: 20px;
+}
+
 </style>

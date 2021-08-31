@@ -34,28 +34,38 @@
     <v-row>
         <v-col cols="12" lg="11"> </v-col>
     </v-row>
-    <h1>OUR UNIQUE APPROACH</h1>
-    <v-timeline>
-        <v-timeline-item v-for="service in services1" :key="service" cols="11" lg="4">
-            <v-card>
-                <v-card-title class="text-h5 head">
-                    {{ service.heading }}
-                </v-card-title>
 
-                <v-card-subtitle class="body">
-                    <h3>{{ service.description }}</h3>
-                </v-card-subtitle>
+    <v-container>
+        <v-row>
+            <v-col v-for="(service,i) in services1" :key="i" cols="12" sm="4">
+                <v-timeline dense clipped>
+                    <v-timeline-item fill-dot class="mb-4" color="red" large>
 
-                <v-row>
-                    <v-col v-for="data in service.children" :key="data" cols="11" lg="11">
-                        <ul>
-                            <li>{{ data.sub }}</li>
-                        </ul>
-                    </v-col>
-                </v-row>
-            </v-card>
-        </v-timeline-item>
-    </v-timeline>
+                        <template v-slot:icon>
+                            <span>Image</span>
+                        </template>
+
+                        <v-row justify="space-between">
+                            <v-col cols="12">
+                                <h2>{{ service.heading }}</h2>
+                                <p>{{ service.description }}</p>
+                            </v-col>
+                        </v-row>
+                    </v-timeline-item>
+
+                    <v-row justify="space-between">
+                        <v-col v-for="data in service.children" :key="data" cols="12">
+
+                                <v-timeline-item class="mb-4" color="red" icon-color="grey lighten-2" small>
+                                    {{ data.sub }}
+                                </v-timeline-item>
+
+                        </v-col>
+                    </v-row>
+                </v-timeline>
+            </v-col>
+        </v-row>
+    </v-container>
 
     <h1>OUR UNIQUE APPROACH</h1>
     <v-row>

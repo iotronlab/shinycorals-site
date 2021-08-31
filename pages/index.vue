@@ -23,7 +23,7 @@
     </v-row>
 
     <section>
-      <about />
+      <About />
     </section>
 
     <section id="upper-classroom" class="pa-8 text-center">
@@ -49,19 +49,25 @@
       </p>
 
       <section class="deep-orange lighten-4">
-        <program-detail />
+        <ProgramDetail/>
       </section>
     </section>
+
+    <v-container class="ma-15">
+      <Review/>
+    </v-container>
+
+    <section class="mt-10">
+      <Social/>
+    </section>
+
   </v-container>
 </template>
 
 <script>
 import { mdiCheckDecagram } from '@mdi/js'
-import ProgramDetail from '~/components/ProgramDetail.vue'
-import About from '~/components/About.vue'
 
 export default {
-  components: { ProgramDetail, About },
   data() {
     return {
       icons: {
@@ -114,4 +120,6 @@ export default {
   ) !important;
   box-shadow: 0 2px 4px 0 #f44336 !important;
 }
+
+
 </style>

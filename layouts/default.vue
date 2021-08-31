@@ -30,7 +30,7 @@
         <v-btn
           v-for="item in navLinks"
           :key="item.title"
-          color="secondary"
+          color="purple"
           class="mx-2"
           router
           exact
@@ -50,6 +50,12 @@
     <v-main>
       <nuxt />
     </v-main>
+
+     <LazyFooter
+      :socialLinks="socialLinks"
+      :icons="icons"
+    />
+
   </v-app>
 </template>
 
@@ -59,10 +65,8 @@ import {
   mdiPhone,
   mdiEmail,
   mdiFacebook,
-  mdiInstagram,
-  mdiYoutube,
+  mdiWhatsapp,
   mdiGoogle,
-  mdiPinterest,
 } from '@mdi/js'
 
 export default {
@@ -73,6 +77,7 @@ export default {
         menu: mdiMenu,
         call: mdiPhone,
         email: mdiEmail,
+        whatsapp: mdiWhatsapp,
       },
       navLinks: [
         {
@@ -84,8 +89,8 @@ export default {
           to: '/#CLASSROOM PROGRAMMES',
         },
         {
-          title: 'Gallary',
-          to: '/gallary',
+          title: 'Gallery',
+          to: '/gallery',
         },
 
         {
@@ -101,25 +106,17 @@ export default {
       socialLinks: [
         {
           name: 'Facebook',
-          url: 'https://www.facebook.com/signetlogo',
+          url: 'https://www.facebook.com/',
           icon: mdiFacebook,
         },
         {
-          name: 'Instagram',
-          url: 'https://www.instagram.com/signetlogo',
-          icon: mdiInstagram,
+          name: 'Whatsapp',
+          url: 'https://www.Whatsapp.com/',
+          icon: mdiWhatsapp,
         },
-        {
-          name: 'Youtube',
-          url: 'https://www.youtube.com/channel/UCTHNYidV3Jv-tRoEB_iUmTQ',
-          icon: mdiYoutube,
-        },
-        { name: 'Google', url: 'https://g.co/kgs/jbFUBk', icon: mdiGoogle },
-        {
-          name: 'Pinterest',
-          url: 'https://www.pinterest.ca/signetlogo',
-          icon: mdiPinterest,
-        },
+
+        { name: 'Google', url: 'https://www.google.com/', icon: mdiGoogle },
+
       ],
 
     }

@@ -23,7 +23,6 @@
         :aria-label="social.name"
         ><v-icon v-html="social.icon"></v-icon></v-btn
     ></v-list-item>
-    <v-subheader class="overline font-weight-bold">find us on</v-subheader>
   </v-list>
 </template>
 

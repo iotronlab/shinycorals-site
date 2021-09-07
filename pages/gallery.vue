@@ -10,38 +10,32 @@
     </v-container>
     <!-- <img src="@/assets/image/1.jpeg"> -->
     <div class="text-center bg-model">
-        <v-dialog v-model="dialog" width="500" >
+        <v-dialog v-model="dialog" width="100%" >
             <template v-slot:activator="{ on, attrs }">
-
                 <v-row>
-                    <v-col cols="12" lg="4" class="colm" v-for="image in gallery" :key="image">
-                        <v-img :src="image.img" class="ma-2 image" v-bind="attrs" v-on="on" />
+                    <v-col cols="12" sm="4" v-for="(image,i) in gallery" :key="i" >
+                        <v-img :src="image.img" class="image" v-bind="attrs" v-on="on" />
                     </v-col>
                 </v-row>
             </template>
-            <v-btn color="white" class="btn bg-mode close" dark dense text @click="dialog = false">
+             <v-btn color="white" class="btn bg-model close" dark dense text @click="dialog = false">
                 <p> x </p>
             </v-btn>
-            <v-card>
-                <v-card-title class="text-h5 grey lighten-2">
-
-                    <v-carousel height="500" hide-delimiter-background show-arrows-on-hover >
+            <!-- <v-card> -->
+                <!-- <v-card-title class="text-h5 grey lighten-2"> -->
+                    <v-carousel height="700" hide-delimiter-background show-arrows-on-hover >
                         <v-carousel-item v-for="(slide, i) in gallery" :key="i">
                             <!-- <v-sheet :color="colors[i]" height="100%"> -->
                             <v-row class="fill-height" align="center" justify="center">
                                 <div>
-                                    <v-img :src="slide.img" class="ma-2 image" height="100%" />
+                                    <v-img :src="slide.img" class="image" height="100%" width="100%" />
                                 </div>
                             </v-row>
                             <!-- </v-sheet> -->
                         </v-carousel-item>
                     </v-carousel>
-
-                </v-card-title>
-
-                <v-divider></v-divider>
-
-            </v-card>
+                <!-- </v-card-title> -->
+            <!-- </v-card> -->
             <!-- <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn color="white" class="btn" dark dense text @click="dialog = false">
@@ -75,14 +69,15 @@
 //   document.querySelector('.bg-model').style.display = 'none';
 // })
 export default {
-    methods: {
-        close() {
-            // alert("function called");
-            this.dialog = "false";
-        }
-    },
+    // methods: {
+    //     close() {
+    //         // alert("function called");
+    //         this.dialog = "false";
+    //     }
+    // },
     data() {
         return {
+          dialog: false,
             // src: require('@/assets/image/1.jpeg')
             // img:    { src: require('@/assets/image/1.jpeg') } ,
             gallery: [{

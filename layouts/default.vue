@@ -5,7 +5,7 @@
       fixed
       app
       temporary
-      color="rgba(0, 0, 0, 0)"
+      color="rgba(0, 0, 0, 0.2)"
     >
       <LazyNavDrawer
         :socialLinks="socialLinks"
@@ -35,7 +35,7 @@
           router
           exact
           :to="item.to"
-          ><strong>{{ item.title }}</strong></v-btn
+          ><strong class="home white--text">{{ item.title }}</strong></v-btn
         >
       </v-row>
       <v-btn
@@ -51,9 +51,13 @@
       <nuxt />
     </v-main>
 
+   <section class="mt-5">
+      <Social/>
+    </section>
+
      <LazyFooter
       :socialLinks="socialLinks"
-      :icons="icons"
+        :navLinks="navLinks"
     />
 
   </v-app>
@@ -80,13 +84,17 @@ export default {
         whatsapp: mdiWhatsapp,
       },
       navLinks: [
+         {
+          title: 'Home',
+          to: '/#home',
+        },
         {
-          title: 'About US',
-          to: '/#about-us',
+          title:'About US',
+          to:'/about-us',
         },
         {
           title: 'CLASSROOM PROGRAMMES',
-          to: '/#CLASSROOM PROGRAMMES',
+          to: '/#ClassroomProgrammes',
         },
         {
           title: 'Gallery',
@@ -95,12 +103,7 @@ export default {
 
         {
           title:'Contact US',
-          to: '/contact',
-        },
-
-        {
-          title: 'Notices',
-          to: '/notices',
+          to: '/contact-us',
         },
       ],
       socialLinks: [
@@ -125,7 +128,7 @@ export default {
     let myNav = document.getElementById('nav')
     window.onscroll = function () {
       'use strict'
-      if (document.body.scrollTop >= 200) {
+      if (document.body.scrollTop >= 1000) {
         myNav.classList.add('nav-transparent')
       } else {
         myNav.classList.remove('nav-transparent')
@@ -137,7 +140,7 @@ export default {
 </script>
 <style scoped>
 .nav-transparent {
-  transition: opacity 0.9s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   background-color: transparent !important;
 }
 </style>

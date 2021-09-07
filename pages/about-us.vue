@@ -1,17 +1,20 @@
 <template>
 <v-container>
-    <v-row justify="center">
-        <v-col cols="12" lg="11">
-            <h1>Seven Core Areas of Learning</h1>
-            <h3>Based on the Core Concept of PlaySchool</h3>
-        </v-col>
-    </v-row>
+    <v-col class="mb-10" justify="center" align="center">
+            <h1 class="text-h4 grey--text"><span class="text-h3 red--text">Seven Core</span>Areas of Learning</h1>
 
-    <div>
-        <v-timeline :reverse="reverse" dense>
+            <p class="text-h5 grey--text">Based on the<span class="black--text"><strong>Core Concept of PlaySchool</strong></span></p>
+    </v-col>
+
+
+
+ <!-- <div>
+      <v-timeline
+        class="text-right"
+        >
             <v-timeline-item v-for="(service, i) in services" :key="i">
                 <v-card class="elevation-2">
-                    <v-card-title class="text-h5 head">
+                    <v-card-title class="text-subtitle-1 head">
                         {{ service.heading }}
                     </v-card-title>
                     <v-card-text class="body">
@@ -20,27 +23,54 @@
                 </v-card>
             </v-timeline-item>
         </v-timeline>
+    </div> -->
+
+    <div>
+      <v-timeline
+        class="text-left"
+        >
+        <v-timeline-item
+            v-for="(service, i) in services"
+            :key="i"
+            :color="service.color"
+            >
+              <template  v-slot:opposite>
+                 <span
+               :class="`text-h2 font-weight-bold ${service.color}--text`"
+                v-text="service.number"
+                 ></span></template>
+             <div>
+                  <h2 :class="`text-h6  mb-4 black--text`">
+                    {{ service.heading }}
+                  </h2>
+              <div>
+                 <h2 :class="`text-body-1 mb-4 grey--text`">
+                        {{ service.description }}
+                 </h2>
+              </div>
+            </div>
+          </v-timeline-item>
+        </v-timeline>
     </div>
-    <v-card>
-        <v-card-title class="text-h5 head">
-            {{ heading }}
+
+<v-container class="mt-16 mb=12">
+        <v-card-title class="text-h4">
+           WHO WE ARE AND WHAT WE DO
         </v-card-title>
 
-        <v-card-subtitle class="body">
-            <h3>{{ description }}</h3>
+        <v-card-subtitle class="text-body-1 grey--text">
+            <h3>SHINY CORALS PRESCHOOL is very methodical and new-age conceptual preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool concentrates on the overall development of children. With its very rich curriculum for children’s 7 winged developments, it introduces digital smart classroom for every class.
+                We strongly believe that learning begins with the family; the school’s goal is to extend and develope that process in a spirit of cooperation among students, teachers, and parents. We also believe that a small student to teacher ratio is of utmost importance to give students the attention they need to reach their full potential.
+                "We value trust, fairness, cooperation, and sensitivity, and expect students to learn to reach outside themselves and respect the dignity of others. Our students will not only graduate from SHINY CORALS PRESCHOOL with strong academic skills and a readiness for high school, they will also grow as individuals and learn about the importance of social responsibility."
+                Our Teachers are well trained educators and having fair experience in education sectors. Our teaching Assistants are well groomed and very well behaved which will win hearts of our children. Our staffs are always helpful via conferences and monthly meetings throughout the school year.</h3>
         </v-card-subtitle>
-    </v-card>
+</v-container>
 
-    <v-row>
-        <v-col cols="12" lg="11"> </v-col>
-    </v-row>
-
-    <v-container>
+<!-- <v-container >
         <v-row>
             <v-col v-for="(service,i) in services1" :key="i" cols="12" sm="4">
                 <v-timeline dense clipped>
                     <v-timeline-item fill-dot class="mb-4" color="red" large>
-
                         <template v-slot:icon>
                             <span>Image</span>
                         </template>
@@ -52,10 +82,8 @@
                             </v-col>
                         </v-row>
                     </v-timeline-item>
-
                     <v-row justify="space-between">
                         <v-col v-for="data in service.children" :key="data" cols="12">
-
                                 <v-timeline-item class="mb-4" color="red" icon-color="grey lighten-2" small>
                                     {{ data.sub }}
                                 </v-timeline-item>
@@ -65,22 +93,23 @@
                 </v-timeline>
             </v-col>
         </v-row>
-    </v-container>
+    </v-container> -->
 
-    <h1>OUR UNIQUE APPROACH</h1>
-    <v-row>
-        <v-col v-for="service in services1" :key="service" cols="11" lg="4">
+<v-row class="mt-9" justify="center">
+    <h1 class="text-h4  red--text mt-12 text-decoration-underline">OUR UNIQUE APPROACH</h1>
+    <v-row class="mt-11">
+        <v-col v-for="(service1,i) in services1" :key="i" cols="11" lg="4">
             <v-card>
-                <v-card-title class="text-h5 head">
-                    {{ service.heading }}
+                <v-card-title class="text-h5 head ">
+                    {{ service1.heading1 }}
                 </v-card-title>
 
                 <v-card-subtitle class="body">
-                    <h3>{{ service.description }}</h3>
+                    <h3 class="text-body-1">{{ service1.description1 }}</h3>
                 </v-card-subtitle>
 
                 <v-row>
-                    <v-col v-for="data in service.children" :key="data" cols="11" lg="11">
+                    <v-col v-for="(data,i) in service1.children" :key="i" cols="11" lg="11">
                         <ul>
                             <li>{{ data.sub }}</li>
                         </ul>
@@ -89,6 +118,9 @@
             </v-card>
         </v-col>
     </v-row>
+    </v-row>
+
+  <v-container class="pa-8 ma-12">
     <v-row>
         <v-col cols="11" lg="4">
             <v-card>
@@ -103,6 +135,33 @@
             </v-card>
         </v-col>
     </v-row>
+</v-container>
+
+
+
+<v-container class="ma-6">
+    <v-row>
+        <v-col>
+            <v-row justify="center">
+                <h1 class="Achievementsheader text-h4 mt-15 mb-10">Our <span class="text-h2 red--text">Achievements</span></h1>
+            </v-row>
+            <v-row justify="center">
+                <v-col v-for="(achievement,i) in achievements" :key="i" cols="12" sm="3" class="imgcol" justify="center">
+                           <v-img class="achievementImage mt-15 ml-7"
+                                :src="achievement.img"
+                             ></v-img>
+
+                    <h1 class="ml-15 mt-5">{{ achievement.number }}</h1>
+                    <h3 class="archi mr-4 mt-5">{{ achievement.title }}</h3>
+                </v-col>
+            </v-row>
+        </v-col>
+    </v-row>
+  </v-container>
+
+
+
+<!-- <v-container>
     <v-row>
         <v-col>
             <v-row>
@@ -117,25 +176,33 @@
             </v-row>
         </v-col>
     </v-row>
-    <h1 class="red mt-5">F.A.Q (FREQUENTLY ASKED QUESTIONS)</h1>
+  </v-container> -->
+
+<v-container>
+  <v-row class="mt-8" justify="center">
+   <h1 class="text-h4 ma-10 "><span class="text-h3 red--text"> F.A.Q </span>(FREQUENTLY ASKED QUESTIONS)</h1>
+
     <v-expansion-panels>
-        <v-expansion-panel v-for="service in faq" :key="service" cols="12" lg="11">
+       <h1 class="text-subtitle-1 red pa-3 text-left">CONTACT US DIRECTLY IF YOU DON'T FIND THE INFORMATION NEEDED BELOW.</h1>
+        <v-expansion-panel v-for="(query,i) in faq" :key="i" cols="12" lg="11">
             <v-expansion-panel-header class="head">
-                {{ service.question }}
+                {{ query.question }}
             </v-expansion-panel-header>
             <v-expansion-panel-content>
-                {{ service.answer }}
+                {{ query.answer }}
             </v-expansion-panel-content>
         </v-expansion-panel>
     </v-expansion-panels>
+    </v-row>
+</v-container>
 
-    <v-row>
+    <!-- <v-row>
         <v-col v-for="service in media" :key="service" cols="12" lg="4">
             <v-img :src="service.src" contain class="ma-2" />
             <h3>{{ service.title }}</h3>
         </v-col>
-    </v-row>
-    <v-row>
+    </v-row> -->
+    <!-- <v-row>
         <v-col v-for="service in footer" :key="service" cols="11" lg="4">
             <v-card>
                 <v-card-title class="head">
@@ -146,7 +213,7 @@
                 </v-card-sub-title>
             </v-card>
         </v-col>
-    </v-row>
+    </v-row> -->
 </v-container>
 </template>
 
@@ -159,26 +226,31 @@ export default {
                     heading: 'COMMUNICATION AND LANGUAGE',
                     description: `Children are encouraged to extend their vocabulary and fluency by talking, listening and responding to stories, songs and rhymes in small and large groups.  Children learn the purpose of writing and how to draw and write symbols for themselves.  Children are encouraged to give their attention to what others say and respond appropriately.  Children are also encouraged to follow simple instructions and answer ‘how’ and ‘why’ questions at group discussions.`,
                     number: 1,
+                    color:'pink',
                 },
                 {
                     heading: 'PHYSICAL DEVELOPMENT',
                     description: `Children learn how to stay healthy by everyday morning yoga which will develope their mental calmness, physical and mental balance. They also develop the fine motor skills they will need to use tools, including pens, pencils and scissors and to handle small objects safely and with increasing control. They understand about the importance of, and how to look after, their bodies when we discuss health and safe-care with them. At snack times, we discuss about good and healthy food.`,
                     number: 2,
+                    color:'pink',
                 },
                 {
                     heading: 'PERSONAL, EMOTIONAL AND SOCIAL DEVELOPMENT',
                     description: `Children are individually supported in developing confidence, autonomy and self respect. They are encouraged to work and concentrate independently and also to take part in the life of the Pre-School, sharing and cooperating with other children and adults. They learn to express their feelings for others, make choices and respect each other. All children are given the opportunity to take responsibility for themselves, for other people and for the building and equipment. The children are encouraged to play co-operatively and show sensitivity to others around them when playing with toys.`,
                     number: 3,
+                    color:'pink',
                 },
                 {
                     heading: 'LITERACY',
                     description: `Children are encouraged to link sounds and letters, and to begin to read and write. The children have access to a wide range of reading materials (books, poems) to ignite their interest. Our small library gives every child the opportunity to become familiar with books`,
                     number: 4,
+                     color:'pink',
                 },
                 {
                     heading: 'MATHEMATICS',
                     description: `Children become familiar with counting, understanding and using numbers, to describe shapes, spaces and measure. We use songs, games, digital board and picture books to help children to become aware of number sequences and simple mathematical operations. We also use educational toys such as shape sorters to help with their understanding.`,
                     number: 5,
+                    color:'pink',
                 },
                 {
                     heading: 'UNDERSTANDING THE WORLD',
@@ -187,22 +259,19 @@ export default {
                     They learn how to use the right tool for the task.  They can also learn how to use computers through various games we have, aided by a child-friendly mouse to navigate around the page.
                     Children also will celebrate different important days of the year to become an Indian as well as a World Citizen.`,
                     number: 6,
+                    color:'pink',
                 },
                 {
                     heading: 'EXPRESSIVE ARTS AND DESIGN',
                     description: `Children are encouraged to use creativity to express their ideas and feelings. Paint, glue, crayons and pencils as well as natural and recycled resources help them to explore colour, shape and texture.  Children act out stories, sing, dance, and play musical instruments and there are many opportunities for imaginative role-play. We will use different stories to teach role play to the children.`,
                     number: 7,
+                    color:'pink',
                 },
             ],
 
-            heading: 'WHO WE ARE AND WHAT WE DO',
-            description: `SHINY CORALS PRESCHOOL is very methodical and new-age conceptual preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool concentrates on the overall development of children. With its very rich curriculum for children’s 7 winged developments, it introduces digital smart classroom for every class.
-                We strongly believe that learning begins with the family; the school’s goal is to extend and develope that process in a spirit of cooperation among students, teachers, and parents. We also believe that a small student to teacher ratio is of utmost importance to give students the attention they need to reach their full potential.
-                "We value trust, fairness, cooperation, and sensitivity, and expect students to learn to reach outside themselves and respect the dignity of others. Our students will not only graduate from SHINY CORALS PRESCHOOL with strong academic skills and a readiness for high school, they will also grow as individuals and learn about the importance of social responsibility."
-                Our Teachers are well trained educators and having fair experience in education sectors. Our teaching Assistants are well groomed and very well behaved which will win hearts of our children. Our staffs are always helpful via conferences and monthly meetings throughout the school year.`,
             services1: [{
-                    heading: 'What Makes US different?',
-                    description: `We, at Shiny Corals PreSchool, believe education must come in a colourful and playful manner. Kids learn things easily when anything is taught through activities. Considering the possibilities of the tender age that our kids are at, we designed a curriculum full of both indoor and outdoor activities. Shiny Corals Preschool will provide Internet (World Wide Web) or an intranet. Early writing, reading and number work are all done in the context of play and exercise books and copies, which are as nominal as could be possible.`,
+                    heading1: 'What Makes US different?',
+                    description1: `We, at Shiny Corals PreSchool, believe education must come in a colourful and playful manner. Kids learn things easily when anything is taught through activities. Considering the possibilities of the tender age that our kids are at, we designed a curriculum full of both indoor and outdoor activities. Shiny Corals Preschool will provide Internet (World Wide Web) or an intranet. Early writing, reading and number work are all done in the context of play and exercise books and copies, which are as nominal as could be possible.`,
                     children: [{
                             sub: ' Activities throughout the year as per calender programs and as per academics.',
                         },
@@ -230,8 +299,8 @@ export default {
                     ],
                 },
                 {
-                    heading: 'Learning through Play',
-                    description: `Learning through play is important as this is the natural way that children learn. Sometimes their play will be boisterous; sometimes they will describe and discuss what they are doing. Sometimes they will be quiet and reflective as they play. At the Pre-School we create a challenging environment and support children’s learning through planned play activities. We value, support and extend children’s spontaneous play, extending and developing their language and communication during their play. Through different forms of play and field trips the children can`,
+                    heading1: 'Learning through Play',
+                    description1: `Learning through play is important as this is the natural way that children learn. Sometimes their play will be boisterous; sometimes they will describe and discuss what they are doing. Sometimes they will be quiet and reflective as they play. At the Pre-School we create a challenging environment and support children’s learning through planned play activities. We value, support and extend children’s spontaneous play, extending and developing their language and communication during their play. Through different forms of play and field trips the children can`,
                     children: [{
                             sub: 'Explore, develope and go through learning experiences that help them make sense of the world.',
                         },
@@ -259,8 +328,8 @@ export default {
                     ],
                 },
                 {
-                    heading: 'Our Vision',
-                    description: `Equipped with a well researched curriculum based on the seven areas of learning, our grand vision is for our children to grow up into responsible individuals and:`,
+                    heading1: 'Our Vision',
+                    description1: `Equipped with a well researched curriculum based on the seven areas of learning, our grand vision is for our children to grow up into responsible individuals and:`,
                     children: [{
                             sub: 'To enhance the development and education of children under school age in a way that involves parents.',
                         },
@@ -299,7 +368,7 @@ export default {
                 },
                 {
                     question: '3. Which accreditation does the school follow?',
-                    answer: `Shiny Corals follows a combination method of Montessori and play way with         different activities to open up children's brains to a curious world.`,
+                    answer: `Shiny Corals follows a combination method of Montessori and play way with different activities to open up children's brains to a curious world.`,
                 },
                 {
                     question: '4. What are the school fees?',
@@ -352,53 +421,97 @@ export default {
                     answer: `Our teachers and attendants are very loving and playful with the children. Yet, if a child needs her/his parents can play with her/him for 10 minutes after 30 minutes in class. This will be allowed only 1st week of admission for persistently crying children only.`,
                 },
             ],
-            media: [{
-                    title: 'LIKE OUR PAGE',
+
+
+
+
+
+achievements: [
+             {
+                 img:require('@/assets/img/girl.png'),
+                 number: 520,
+                  title: 'NUMBER OF CHILDREN',
                 },
                 {
-                    title: 'CONTACT US ',
+                 img:require('@/assets/img/teacher.png') ,
+                 number: 700,
+                 title: 'EXPERIENCED TEACHERS',
+                },
+              {
+                 img:require('@/assets/img/family.png'),
+                 number: 180,
+                 title: 'SATISFIED PARENTS',
                 },
                 {
-                    //  img: ,
-                    title: 'CIRCLE US',
-                },
+                 img:require('@/assets/img/presentation.png'),
+                 number: 59,
+                 title: 'CLASSES CONDUCTED',
+             },
             ],
-            footer: [{
-                    heading: 'Shiny Corals Pre-School',
-                    description: 'HOME ABOUT US CLASSROOM PROGRAMES GALLERY CONTACT US NOTICES',
-                },
-                {
-                    heading: 'NEWSLETTER SIGNUP',
-                    description: 'By subscribing to our mailing list you will always be update with the latest news from us.',
-                },
-                {
-                    heading: 'GET IN TOUCH',
-                    description: 'Shiny Corals PreSchool West Bankim Pally, MADHYAMGRAM - 700129. contact@shinycorals.com QUESTIONS? CALL:9903067468 Open in Google Maps',
-                },
-            ],
+
+            // media: [{
+            //         title: 'LIKE OUR PAGE',
+            //     },
+            //     {
+            //         title: 'CONTACT US ',
+            //     },
+            //     {
+            //         //  img: ,
+            //         title: 'CIRCLE US',
+            //     },
+            // ],
+            // footer: [{
+            //         heading: 'Shiny Corals Pre-School',
+            //         description: 'HOME ABOUT US CLASSROOM PROGRAMES GALLERY CONTACT US NOTICES',
+            //     },
+            //     {
+            //         heading: 'NEWSLETTER SIGNUP',
+            //         description: 'By subscribing to our mailing list you will always be update with the latest news from us.',
+            //     },
+            //     {
+            //         heading: 'GET IN TOUCH',
+            //         description: 'Shiny Corals PreSchool West Bankim Pally, MADHYAMGRAM - 700129. contact@shinycorals.com QUESTIONS? CALL:9903067468 Open in Google Maps',
+            //     },
+            // ],
             // achievements: [
-            //   {
-            //     img: [{ src: require('@/assets/image/girl.png') }],
+            // {
+            //     img: require('@/assets/image/girl.png'),
             //     number: 520,
-            //     title: 'NUMBER OF CHILDREN',
-            //   },
-            //   {
-            //     img: [{ src: require('@/assets/image/teacher.png') }],
+            //      title: 'NUMBER OF CHILDREN',
+            //    },
+            //    {
+            //      img:require('@/assets/image/teacher.png') ,
             //     number: 700,
             //     title: 'EXPERIENCED TEACHERS',
-            //   },
-            //   {
-            //     img: [{ src: require('@/assets/image/family.png') }],
+            //    },
+            //  {
+            //     img:require('@/assets/image/family.png'),
             //     number: 180,
             //     title: 'SATISFIED PARENTS',
-            //   },
-            //   {
-            //     img: [{ src: require('@/assets/image/presentation.png') }],
+            //    },
+            //    {
+            //     img:require('@/assets/image/presentation.png'),
             //     number: 59,
-            //     title: 'CLASSES CONDUCTED',
-            //   },
-            // ],
+            //      title: 'CLASSES CONDUCTED',
+            // },
+            //  ],
         }
     },
 }
 </script>
+
+<style scoped>
+.achievementImage
+{
+  height:45%;
+  width: 55%;
+
+}
+
+.Achievementsheader
+{
+   text-align: center;
+   border-bottom: 2px solid #f1f1f1;
+   width: 100%;
+}
+</style>

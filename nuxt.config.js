@@ -39,6 +39,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/pwa',
+   // '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -78,7 +80,43 @@ export default {
     }
   },
 
+  // googleFonts: {
+  //   families: {
+  //     Raleway: {
+  //       wght: [400, 700],
+  //     },
+  //   },
+  //   display: 'swap',
+  // },
+
+ // PWA module configuration: https://go.nuxtjs.dev/pwa
+ pwa: {
+  icon: {
+    /* icon options */
+    source: '/shiny_logo.png',
+  },
+  manifest: {
+    lang: 'en',
+    name: 'shinycorals',
+    short_name: 'Shiny Logo',
+    description: ``,
+  },
+  meta: {
+    theme_color: '#121212',
+    nativeUI: true,
+    name: 'Shiny Logo',
+    author: 'iotron',
+    description: ``,
+    ogHost: '',
+  },
+},
+
+
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+
   }
 }
+
+

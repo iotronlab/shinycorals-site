@@ -1,7 +1,7 @@
 <template>
   <v-footer
-    color="purple lighten-2"
-    padless
+
+    class="footer mt-5"
   >
     <v-row
       no-gutters
@@ -10,22 +10,24 @@
     <v-col col="12" sm="5">
       <h1 class="text-h6 ml-8 mt-2 white--text">Shiny Corals Pre-School</h1>
       <v-col sm="7">
-      <v-btn
-        v-for="link in navlinks"
-        :key="link"
-        color="white"
-        text
-        rounded
-        class="my-2"
-      >
-        {{ link }}
-      </v-btn>
+      <v-list-item
+      class="white--text"
+      v-for="item in navLinks"
+      :key="item.title"
+      :to="item.to"
+      router
+      exact
+    >
+      <v-list-item-content>
+        <v-list-item-title v-text="item.title" class="font-weight-bold" />
+       </v-list-item-content>
+       </v-list-item>
       </v-col>
       </v-col>
       <v-col col="12" sm="5">
         <h1 class="text-h5 white--text">GET IN TOUCH</h1>
         <h1 class="text-h6 white--text">Shiny Corals PreSchool</h1>
-        <p class="white--text">West Bankim Pally, MADHYAMGRAM - 700129. contact@shinycorals.com</p>
+        <p class="white--text">West Bankim Pally, MADHYAMGRAM - 700129.<br>contact@shinycorals.com</p>
 
         <p class="white--text">QUESTIONS? CALL:<br>9903067468</p>
         <p class="white--text">
@@ -34,66 +36,58 @@
 
       </v-col>
 
-<v-row justify="center">
+<v-row class="footer-bottom" >
     <v-col
-        class="purple lighten-1 py-4 text-center white--text"
+        class="text-center white--text"
         cols="12"
         sm="6"
       >
-        <span class="mr-2">&copy;{{ new Date().getFullYear() }}</span> — <strong>All rights reserved.</strong>
+        <span class="grey--text">&copy;{{ new Date().getFullYear() }}</span> — <strong class="grey--text">All rights reserved.</strong>
       </v-col>
-      <v-col cols="12" sm="6" class="purple lighten-1 py-4 text-center white--text">
-        <v-row no-gutters justify="space-around" class="mb-4">
+      <v-col cols="12" sm="6" class="text-center white--text" justify="space-around">
+        <v-row no-gutters justify="space-around">
           <p class="overline text-h5 text--disabled">GET SOCIAL</p>
         <v-btn
-            v-for="(social, i) in socialLinks"
-            :key="i"
-            icon
-            :href="social.url"
-            target="_blank"
-            :aria-label="social.name"
-            ><v-icon large>{{ social.icon }}</v-icon></v-btn
-          >
+        icon
+        v-for="social in socialLinks"
+        :key="social.name"
+        :href="social.url"
+        target="_blank"
+        :aria-label="social.name"
+        ><v-icon v-html="social.icon"></v-icon></v-btn>
         </v-row>
       </v-col>
- </v-row>
+     </v-row>
     </v-row>
   </v-footer>
 </template>
+
+
 <script>
-import {
-  mdiFacebook,
-  mdiWhatsapp,
-  mdiGoogle,
-} from '@mdi/js'
-
-  export default {
-
-    data: () => ({
-      navlinks: [
-        'HOME',
-        'ABOUT US',
-        'CLASSROOM',
-        'GALLERY',
-        'PROGRAMMES',
-        'CONTACT US',
-        'NOTICES',
-      ],
-      socialLinks: [
-        {
-          name: 'Facebook',
-          url: 'https://www.facebook.com/',
-          icon: mdiFacebook,
-        },
-        {
-          name: 'Whatsapp',
-          url: 'https://www.Whatsapp.com/',
-          icon: mdiWhatsapp,
-        },
-
-        { name: 'Google', url: 'https://www.google.com/', icon: mdiGoogle },
-
-      ],
-    }),
-  }
+export default {
+  props: {
+    navLinks: {
+      type: Array,
+      required: true,
+    },
+    socialLinks: {
+      type: Array,
+      required: true,
+    },
+  },
+}
 </script>
+
+<style scoped>
+.footer
+{
+    background-image: linear-gradient(to right,#aa076b, #61045f);
+
+}
+.footer-bottom
+{
+   background-image: linear-gradient(to right,#aa076b, #61045f);
+   border-top: 5px solid #484848;
+}
+
+</style>

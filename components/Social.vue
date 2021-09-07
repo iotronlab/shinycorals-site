@@ -1,5 +1,5 @@
 <template>
-    <v-row justify="center" align="center">
+    <v-row justify="center" align="center" class="mt-15">
         <v-card
             v-for="(social, i) in socialLinks"
             :key="i"
@@ -8,11 +8,9 @@
             :href="social.url"
             target="_blank"
             :aria-label="social.name"
-            col="12"
-            sm="4"
-            class="mr-4"
-            height="200"
-            width="350"
+            class="ml-2"
+            height="150"
+            width="420"
             ><v-icon x-large>{{ social.icon }}</v-icon>
             <v-card-text>{{social.text}}</v-card-text>
           </v-card>
@@ -46,7 +44,7 @@ export default ({
         },
         {
           name: 'Whatsapp',
-          url: 'https://www.Whatsapp.com/',
+          url:'https://wa.me/9903067468',
           icon: mdiWhatsapp,
           color:'green',
           text:"CONTACT US",
@@ -66,3 +64,4 @@ export default ({
   },
 })
 </script>
+

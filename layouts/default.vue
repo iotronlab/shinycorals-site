@@ -7,10 +7,7 @@
       temporary
       color="rgba(0, 0, 0, 0.2)"
     >
-      <LazyNavDrawer
-        :socialLinks="socialLinks"
-        :navLinks="navLinks"
-      />
+      <LazyNavDrawer :socialLinks="socialLinks" :navLinks="navLinks" />
     </v-navigation-drawer>
     <v-app-bar id="nav" fixed app flat class="nav-transparent">
       <v-app-bar-nav-icon
@@ -50,16 +47,12 @@
     <v-main>
       <nuxt />
     </v-main>
-
+    <!--
    <section class="mt-5">
       <Social/>
-    </section>
+    </section> -->
 
-     <LazyFooter
-      :socialLinks="socialLinks"
-        :navLinks="navLinks"
-    />
-
+    <LazyFooter :socialLinks="socialLinks" :navLinks="navLinks" />
   </v-app>
 </template>
 
@@ -84,13 +77,13 @@ export default {
         whatsapp: mdiWhatsapp,
       },
       navLinks: [
-         {
+        {
           title: 'Home',
           to: '/#home',
         },
         {
-          title:'About US',
-          to:'/about-us',
+          title: 'About US',
+          to: '/about-us',
         },
         {
           title: 'CLASSROOM PROGRAMMES',
@@ -102,7 +95,7 @@ export default {
         },
 
         {
-          title:'Contact US',
+          title: 'Contact US',
           to: '/contact-us',
         },
       ],
@@ -119,9 +112,7 @@ export default {
         },
 
         { name: 'Google', url: 'https://www.google.com/', icon: mdiGoogle },
-
       ],
-
     }
   },
   mounted() {

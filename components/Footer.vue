@@ -8,7 +8,14 @@
       justify="center"
     >
     <v-col col="12" sm="5">
-      <h1 class="text-h6 ml-8 mt-2 white--text">Shiny Corals Pre-School</h1>
+      <v-row class="ma-2">
+       <nuxt-link :to="{ name: 'index' }">
+        <v-img
+            :src="require('@/assets/img/shiny_logo.png')"
+            :max-width="$vuetify.breakpoint.lgAndUp ? 45 : 35"
+          ></v-img>
+      </nuxt-link>
+      <h1 class="text-h6 ml-8 mt-2 white--text">Shiny Corals Pre-School</h1></v-row>
       <v-col sm="7">
       <v-list-item
       class="white--text"

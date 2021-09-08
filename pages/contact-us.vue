@@ -11,7 +11,7 @@
       marginwidth="0"
       >Loading…</iframe
     >
-    <form>
+    <!-- <form>
       <v-text-field
         v-model="name"
         :error-messages="nameErrors"
@@ -95,47 +95,47 @@
 
       <v-btn class="mr-4" @click="submit"> submit </v-btn>
       <v-btn @click="reset()"> clear </v-btn>
-    </form>
+    </form> -->
   </v-container>
 </template>
 
-<script>
-import {
-  mdiMenuDown,
-  mdiClose,
-  mdiCheckboxMarked,
-  mdiCheckboxBlankOutline,
-} from '@mdi/js'
+<!-- <script>
+// import {
+//   mdiMenuDown,
+//   mdiClose,
+//   mdiCheckboxMarked,
+//   mdiCheckboxBlankOutline,
+// } from '@mdi/js'
 
-export default {
-  data() {
-    return {
-      serviceSelect: [],
-      dropdownIcon: mdiMenuDown,
-      removeIcon: mdiClose,
-      checkedIcon: mdiCheckboxMarked,
-      unCheckedIcon: mdiCheckboxBlankOutline,
-      services: [
-        {
-          heading: 'Brand Identity',
-        },
-        {
-          heading: 'Artwork & Merchandise',
-        },
-        {
-          heading: 'Social Media Designs',
-        },
-        {
-          heading: 'Marketing Designs',
-        },
-      ],
-    }
-  },
-  methods: {
-    remove(item) {
-      this.serviceSelect.splice(this.serviceSelect.indexOf(item))
-      this.serviceSelect = [...this.serviceSelect]
-    },
-  },
-}
-</script>
+// export default {
+//   data() {
+//     return {
+//       serviceSelect: [],
+//       dropdownIcon: mdiMenuDown,
+//       removeIcon: mdiClose,
+//       checkedIcon: mdiCheckboxMarked,
+//       unCheckedIcon: mdiCheckboxBlankOutline,
+//       services: [
+//         {
+//           heading: 'Brand Identity',
+//         },
+//         {
+//           heading: 'Artwork & Merchandise',
+//         },
+//         {
+//           heading: 'Social Media Designs',
+//         },
+//         {
+//           heading: 'Marketing Designs',
+//         },
+//       ],
+//     }
+//   },
+//   methods: {
+//     remove(item) {
+//       this.serviceSelect.splice(this.serviceSelect.indexOf(item))
+//       this.serviceSelect = [...this.serviceSelect]
+//     },
+//   },
+// }
+// </script>

@@ -52,9 +52,9 @@ export default ({
 -->
 
 <template>
+<v-container>
 <v-row class="mt-5">
-    <v-col cols="12"
-      sm="4">
+    <v-col cols="12" lg="4">
       <template>
         <v-avatar>
           <v-img
@@ -70,7 +70,7 @@ export default ({
         <v-card-text class="white--text">Thank you for caring for my child each and every day. I’ll never forget the difference you've have made in her life. I feel extremely grateful to have you as my child’s early childhood education teacher. Thanks for your patience and for the quality care you provide each and every day. Ashmita like you so much.</v-card-text>
       </v-card>
       </v-col>
-       <v-col cols="12" sm="4">
+       <v-col cols="12" lg="4">
       <v-card class="elevation-2">
         <v-card-text class="white--text">Thank you for caring for my child each and every day. I’ll never forget the difference you've have made in her life. I feel extremely grateful to have you as my child’s early childhood education teacher. Thanks for your patience and for the quality care you provide each and every day. Ashmita like you so much.</v-card-text>
       </v-card>
@@ -86,7 +86,7 @@ export default ({
         <span>MRS. SHILPI GOSWAMI SAHA</span><br> <span class="ml-15">M/o, Ashmita Saha</span>
       </template>
       </v-col>
-       <v-col cols="12" sm="4">
+       <v-col cols="12" lg="4">
       <template>
         <v-avatar>
            <v-img
@@ -103,6 +103,7 @@ export default ({
       </v-card>
       </v-col>
  </v-row>
+ </v-container>
 </template>
 
 <style scoped>

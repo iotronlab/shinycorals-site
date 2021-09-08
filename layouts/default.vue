@@ -18,6 +18,14 @@
           icons.menu
         }}</v-icon></v-app-bar-nav-icon
       >
+
+      <nuxt-link :to="{ name: 'index' }">
+        <v-img
+          :src="require('@/assets/img/shiny_logo.png')"
+          :max-width="$vuetify.breakpoint.lgAndUp ? 55 : 45"
+        ></v-img>
+      </nuxt-link>
+
       <v-row
         no-gutters
         justify="center"
@@ -25,14 +33,14 @@
         v-if="!$vuetify.breakpoint.mdAndDown"
       >
         <v-btn
-          v-for="item in navLinks"
-          :key="item.title"
+          v-for="(item, i) in navLinks"
+          :key="i"
           color="purple"
           class="mx-2"
           router
           exact
           :to="item.to"
-          ><strong class="home white--text">{{ item.title }}</strong></v-btn
+          ><strong class="white--text">{{ item.title }}</strong></v-btn
         >
       </v-row>
       <v-btn
@@ -77,10 +85,6 @@ export default {
         whatsapp: mdiWhatsapp,
       },
       navLinks: [
-        {
-          title: 'Home',
-          to: '/#home',
-        },
         {
           title: 'About US',
           to: '/about-us',

@@ -7,14 +7,13 @@
           :src="require('@/assets/img/loader.jpg')"
           eager
           max-height="850"
-          class="home"
         ></v-img>
       </v-sheet>
     </v-row>
 
-    <!-- <section>
+    <section>
       <About />
-    </section> -->
+    </section>
 
     <section id="upper-classroom" class="upper-classroom pa-8 text-center">
       <v-row class="mt-15">
@@ -27,27 +26,27 @@
           <p>Sampa Bhowmick ~ Founder.</p>
         </v-col>
         <v-col cols="6" md="4">
-          <v-btn class="button_More pink" fab x-large dark
-            >Find Out<br />More</v-btn
-          >
+          <v-btn class="button_More pink" fab x-large dark>Find Out<br>More</v-btn>
         </v-col>
       </v-row>
     </section>
 
-    <section class="Classroom mt-20 mb-6 pt-4" id="ClassroomProgrammes">
+    <section class="Classroom mt-20 mb-6 pt-4"  id="ClassroomProgrammes">
       <h1 class="text-h3 text-center ma-4">Classroom Programmes</h1>
       <p class="text--disabled text-center ma-4">
         Designed to develope a child's seven areas of learning.
       </p>
 
       <section class="Programdetail">
-        <ProgramDetail />
+        <ProgramDetail/>
       </section>
     </section>
 
     <v-container class="ma-15">
-      <Review />
+      <Review/>
     </v-container>
+
+
   </v-container>
 </template>
 
@@ -62,51 +61,57 @@ export default {
       },
     }
   },
-  mounted() {
-    if (this.$route.hash) {
-      window.onNuxtReady(() => {
-        let hash = this.$route.hash
-        this.$nextTick(function () {
-          setTimeout(() => this.scrollTo(hash), 500)
+   mounted() {
+     if (this.$route.hash) {
+       window.onNuxtReady(() => {
+         let hash = this.$route.hash
+         this.$nextTick(function () {
+           setTimeout(() => this.scrollTo(hash), 500)
         })
-      })
-    }
-  },
-  methods: {
-    scrollTo(hash) {
-      this.$nextTick(function () {
+       })
+     }
+   },
+   methods: {
+     scrollTo(hash) {
+       this.$nextTick(function () {
         const el = document.querySelector(hash)
-        if (el) {
-          setTimeout(() => {
+         if (el) {
+           setTimeout(() => {
             if ('scrollBehavior' in document.documentElement.style) {
-              return window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
-            } else {
-              return window.scrollTo(0, el.offsetTop)
-            }
-          }, 500)
-        }
-      })
-    },
-  },
+               return window.scrollTo({ top: el.offsetTop, behavior: 'smooth' })
+             } else {
+               return window.scrollTo(0, el.offsetTop)
+             }
+           }, 500)
+         }
+       })
+     },
+   },
 }
 </script>
 
 <style scoped>
-.Classroom {
-  background-image: linear-gradient(to right, #d9a7c7, #fffcdc);
+.Classroom
+{
+   background-image: linear-gradient(to right,#d9a7c7, #fffcdc);
+
 }
-.Programdetail {
-  background-image: linear-gradient(to right, #ffc3a0, #ffc3a0);
+.Programdetail
+{
+   background-image: linear-gradient(to right,#ffc3a0, #ffc3a0);
 }
 
-.button_More {
-  width: 30%;
-  height: 110%;
+.button_More
+{
+    width:30%;
+    height:110%;
 }
 
-.upper-classroom {
+.upper-classroom
+{
   border-top: 2px solid #f1f1f1;
-  margin-top: 7%;
-  margin-bottom: 7%;
+  margin-top:7%;
+  margin-bottom:7%;
 }
+
 </style>

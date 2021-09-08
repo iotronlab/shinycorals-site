@@ -98,7 +98,7 @@
 <v-row class="mt-9" justify="center">
     <h1 class="text-h4  red--text mt-12 text-decoration-underline">OUR UNIQUE APPROACH</h1>
     <v-row class="mt-11">
-        <v-col v-for="(service1,i) in services1" :key="i" cols="11" lg="4">
+        <v-col v-for="(service1,i) in services1" :key="i" cols="12" lg="4">
             <v-card>
                 <v-card-title class="text-h5 head ">
                     {{ service1.heading1 }}
@@ -109,7 +109,7 @@
                 </v-card-subtitle>
 
                 <v-row>
-                    <v-col v-for="(data,i) in service1.children" :key="i" cols="11" lg="11">
+                    <v-col v-for="(data,i) in service1.children" :key="i" cols="12" lg="12">
                         <ul>
                             <li>{{ data.sub }}</li>
                         </ul>
@@ -122,7 +122,7 @@
 
   <v-container class="pa-8 ma-12">
     <v-row>
-        <v-col cols="11" lg="4">
+        <v-col cols="12" lg="4">
             <v-card>
                 <v-card-title class="head"> Our Gallery </v-card-title>
                 <v-card-subtitle class="body">
@@ -146,7 +146,7 @@
                 <h1 class="Achievementsheader text-h4 mt-15 mb-10">Our <span class="text-h2 red--text">Achievements</span></h1>
             </v-row>
             <v-row justify="center">
-                <v-col v-for="(achievement,i) in achievements" :key="i" cols="12" sm="3" class="imgcol" justify="center">
+                <v-col v-for="(achievement,i) in achievements" :key="i" cols="12" lg="3" class="imgcol" justify="center">
                            <v-img class="achievementImage mt-15 ml-7"
                                 :src="achievement.img"
                              ></v-img>
@@ -184,7 +184,7 @@
 
     <v-expansion-panels>
        <h1 class="text-subtitle-1 red pa-3 text-left">CONTACT US DIRECTLY IF YOU DON'T FIND THE INFORMATION NEEDED BELOW.</h1>
-        <v-expansion-panel v-for="(query,i) in faq" :key="i" cols="12" lg="11">
+        <v-expansion-panel v-for="(query,i) in faq" :key="i" cols="12" lg="12">
             <v-expansion-panel-header class="head">
                 {{ query.question }}
             </v-expansion-panel-header>

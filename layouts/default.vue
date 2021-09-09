@@ -1,6 +1,12 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed app temporary>
+    <v-navigation-drawer
+      v-model="drawer"
+      fixed
+      app
+      temporary
+      color="rgba(0, 0, 0, 0.2)"
+    >
       <LazyNavDrawer :socialLinks="socialLinks" :navLinks="navLinks" />
     </v-navigation-drawer>
     <v-app-bar id="nav" fixed app flat class="nav-transparent">

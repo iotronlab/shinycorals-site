@@ -2,12 +2,12 @@
   <v-container>
     <v-col class="mb-10" justify="center" align="center">
       <h1 class="text-h4 grey--text">
-        <span class="text-h3 red--text">Seven Core</span>Areas of Learning
+        <span class="text-h3 red--text">Seven Core</span> Areas of Learning
       </h1>
 
       <p class="text-h5 grey--text">
         Based on the<span class="black--text"
-          ><strong>Core Concept of PlaySchool</strong></span
+          ><strong> Core Concept of PlaySchool</strong></span
         >
       </p>
     </v-col>
@@ -28,38 +28,36 @@
             </v-timeline-item>
         </v-timeline>
     </div> -->
-
-    <div>
-      <v-timeline :dense="$vuetify.breakpoint.smAndDown">
-        <v-timeline-item
-          v-for="(service, i) in services"
-          :key="i"
-          :color="service.color"
-          :icon="service.number"
-          fill-dot
-        >
-          <!-- <template v-slot:opposite>
+    <!--
+    <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+      <v-timeline-item
+        v-for="(service, i) in services"
+        :key="i"
+        :color="service.color"
+        :icon="service.number"
+        fill-dot
+      >
+        <template v-slot:opposite>
             <span
               :class="`text-h2 font-weight-bold ${service.color}--text`"
               v-text="service.number"
             ></span
-          ></template> -->
+          ></template>
+        <div>
+          <h2 :class="`text-h6  mb-4 black--text`">
+            {{ service.heading }}
+          </h2>
           <div>
-            <h2 :class="`text-h6  mb-4 black--text`">
-              {{ service.heading }}
+            <h2 :class="`text-body-1 mb-4 grey--text`">
+              {{ service.description }}
             </h2>
-            <div>
-              <h2 :class="`text-body-1 mb-4 grey--text`">
-                {{ service.description }}
-              </h2>
-            </div>
           </div>
-        </v-timeline-item>
-      </v-timeline>
-    </div>
+        </div>
+      </v-timeline-item>
+    </v-timeline> -->
 
-    <v-container class="mt-16 mb=12">
-      <v-row>
+    <v-container>
+      <v-row no-gutters>
         <v-col col="12" lg="6">
           <h1 class="text-h4">WHO WE ARE AND WHAT WE DO</h1>
 
@@ -87,7 +85,11 @@
           </h3>
         </v-col>
         <v-col col="12" lg="6">
-          <v-img :src="require('@/assets/img/Sampa.jpg')"></v-img>
+          <v-img
+            contain
+            height="300"
+            :src="require('@/assets/img/Sampa.jpg')"
+          ></v-img>
         </v-col>
       </v-row>
     </v-container>

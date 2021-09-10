@@ -1,53 +1,25 @@
 <template>
   <v-footer color="primary">
     <v-container fluid>
+      <nuxt-link :to="{ name: 'index' }">
+        <v-img
+          :src="require('@/assets/img/shiny_logo.png')"
+          :max-width="$vuetify.breakpoint.lgAndUp ? 120 : 100"
+          class="mx-auto"
+        ></v-img>
+      </nuxt-link>
       <v-row justify="center">
-        <v-col col="12" lg="6">
-          <v-row justify="center">
-            <v-col col="12" lg="2" justify="center">
-              <nuxt-link :to="{ name: 'index' }">
-                <v-img
-                  :src="require('@/assets/img/shiny_logo.png')"
-                  :max-width="$vuetify.breakpoint.lgAndUp ? 45 : 35"
-                ></v-img> </nuxt-link
-            ></v-col>
-            <v-col col="12" lg="10" justify="center">
-              <h1 class="text-h6">Shiny Corals Pre-School</h1>
-              <h1 class="text-h5">GET IN TOUCH</h1>
-              <!-- <h1 class="text-h6">Shiny Corals PreSchool</h1> -->
-              <p>
-                West Bankim Pally, MADHYAMGRAM - 700129.<br />contact@shinycorals.com
-              </p>
+        <v-col col="12" lg="4" class="text-md-right">
+          <h1 class="text-h6 mt-2">Shiny Corals Pre-School</h1>
 
-              <p>QUESTIONS? <br />CALL:9903067468</p>
-              <p>
-                <v-btn
-                  href="https://www.google.com/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open in Google Maps</v-btn
-                >
-              </p></v-col
-            >
-          </v-row>
-        </v-col>
+          <!-- <h1 class="text-h6">Shiny Corals PreSchool</h1> -->
+          <p>
+            West Bankim Pally, MADHYAMGRAM - 700129.<br />contact@shinycorals.com
+          </p>
 
-        <v-col col="12" lg="6">
-          <v-list-item
-            v-for="item in navLinks"
-            :key="item.title"
-            :to="item.to"
-            router
-            exact
-          >
-            <v-list-item-content>
-              <v-list-item-title v-text="item.title" class="font-weight-bold" />
-            </v-list-item-content>
-          </v-list-item>
+          <p>QUESTIONS? <br />CALL:9903067468</p>
 
-          <v-row no-gutters justify="space-around">
-            <p class="overline text-h5 text--disabled">GET SOCIAL</p>
+          <v-row no-gutters justify="end" class="mb-2">
             <v-btn
               icon
               v-for="social in socialLinks"
@@ -60,15 +32,25 @@
             ></v-btn>
           </v-row>
         </v-col>
+
+        <v-col col="12" lg="4">
+          <v-list-item
+            v-for="item in navLinks"
+            :key="item.title"
+            :to="item.to"
+            router
+            exact
+          >
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title" class="font-weight-bold" />
+            </v-list-item-content>
+          </v-list-item>
+        </v-col>
       </v-row>
 
-      <v-row no-gutters>
-        <v-col class="text-center grey--text" cols="12" lg="12">
-          <span>&copy;{{ new Date().getFullYear() }}</span> —
-          <strong>All rights reserved.</strong>
-        </v-col>
-        <v-col cols="12" lg="12" class="text-center" justify="space-around">
-        </v-col>
+      <v-row no-gutters justify="center">
+        <span>&copy;{{ new Date().getFullYear() }}</span> —
+        <strong>All rights reserved.</strong>
       </v-row>
     </v-container>
   </v-footer>

@@ -57,7 +57,6 @@ export default {
     defaultAssets: false,
 
     theme: {
-      dark: false,
       options: {
         customProperties: false,
         variations: false,
@@ -70,7 +69,7 @@ export default {
       themes: {
         light: {
           primary: '#FEE2E2',
-          // accent: colors.grey.darken3,
+          accent: '#A78BFA',
           // secondary: colors.amber.darken3,
           // info: colors.teal.lighten1,
           // warning: colors.amber.base,
@@ -84,7 +83,10 @@ export default {
   googleFonts: {
     families: {
       Roboto: {
-        wght: [400, 700],
+        wght: [400],
+      },
+      Montserrat: {
+        wght: [700],
       },
     },
     display: 'swap',

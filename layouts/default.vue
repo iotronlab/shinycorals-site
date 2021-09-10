@@ -1,34 +1,33 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed app>
+    <v-navigation-drawer v-model="drawer" fixed app temporary>
       <LazyNavDrawer :socialLinks="socialLinks" :navLinks="navLinks" />
     </v-navigation-drawer>
-    <v-app-bar id="nav" fixed app flat class="nav-transparent">
+    <v-app-bar id="nav" fixed app flat class="nav-transparent" extended>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
         aria-label="nav-button"
       >
-        <v-icon slot="default" color="primary">{{
-          icons.menu
-        }}</v-icon></v-app-bar-nav-icon
+        <v-icon slot="default">{{ icons.menu }}</v-icon></v-app-bar-nav-icon
       >
 
       <v-row
         no-gutters
         justify="center"
         align="center"
+        class="fill-height"
         v-if="!$vuetify.breakpoint.mdAndDown"
       >
         <nuxt-link :to="{ name: 'index' }">
           <v-img
             :src="require('@/assets/img/shiny_logo.png')"
-            :max-width="$vuetify.breakpoint.lgAndUp ? 55 : 45"
+            :max-width="$vuetify.breakpoint.lgAndUp ? 100 : 45"
           ></v-img>
         </nuxt-link>
         <v-btn
           v-for="(item, i) in navLinks"
           :key="i"
-          color="purple"
+          color="accent"
           text
           class="mx-2"
           router

@@ -13,6 +13,7 @@
             <v-row justify="space-between">
               <v-col cols="12">
                 <h2>{{ Program.header }}</h2>
+                <h3>{{ Program.subtitle }}</h3>
                 <p>{{ Program.subheader }}</p>
               </v-col>
             </v-row>
@@ -42,7 +43,8 @@ export default {
     return {
       Programs: [
         {
-          header: 'PLAY GROUP: 1 year 6 months to 2 years 5 months',
+          header: 'PLAY GROUP',
+          subtitle: '1 year 6 months to 2 years 5 months',
           subheader:
             'In PG, children will learn some basic aspects that will help them to grow. Everything will be taught both digitally and physically and will eventually make them ready to transcend to Nursery class. The curriculum includes',
           img: require('@/assets/img/baby-boy.png'),
@@ -55,7 +57,8 @@ export default {
           ],
         },
         {
-          header: 'NURSERY: 2 years 6 months to 3 years 5 months',
+          header: 'NURSERY',
+          subtitle: '2 years 6 months to 3 years 5 months',
           subheader:
             'Nursery is very important because from this class many children will go directly to high schools. So, the curriculum is set as per the requirement of those children. In Nursery, children will be skilled in',
           img: require('@/assets/img/baby.png'),
@@ -69,7 +72,8 @@ export default {
           ],
         },
         {
-          header: 'KINDERGARTEN: 3 years 6 months to 4 years 5 months',
+          header: 'KINDERGARTEN',
+          subtitle: '3 years 6 months to 4 years 5 months',
           subheader:
             'Phonics will be taught at this age. In Kindergarten, children will be ready for',
           img: require('@/assets/img/girlf.png'),

@@ -16,8 +16,8 @@
     </section>
 
     <section id="upper-classroom" class="upper-classroom text-center">
-      <v-row class="mt-15">
-        <v-col cols="12" sm="6" md="8">
+      <v-row class="mt-15" justify="center">
+        <v-col cols="12" lg="9">
           <h1 class="text-h5 red--text pa-8">
             "Early childhood education is a very important aspect of a child’s
             life. Human brain is always receptive
@@ -25,10 +25,8 @@
           </h1>
           <p>Sampa Bhowmick ~ Founder.</p>
         </v-col>
-        <v-col cols="6" md="4">
-          <v-btn class="button_More pink" fab x-large dark
-            >Find Out<br />More</v-btn
-          >
+        <v-col cols="6" lg="3" align-self="center">
+          <v-btn>Find Out More</v-btn>
         </v-col>
       </v-row>
     </section>

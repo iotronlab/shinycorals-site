@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="footer mt-5">
+  <v-footer color="primary">
     <v-row no-gutters justify="center">
       <v-col col="12" sm="5">
         <v-row class="ma-2">
@@ -43,7 +43,7 @@
         </p>
       </v-col>
 
-      <v-row class="footer-bottom">
+      <v-row no-gutters>
         <v-col class="text-center white--text" cols="12" sm="6">
           <span class="grey--text">&copy;{{ new Date().getFullYear() }}</span> —
           <strong class="grey--text">All rights reserved.</strong>
@@ -87,13 +87,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.footer {
-  background-image: linear-gradient(to right, #7d4ea3, #b286d6);
-}
-.footer-bottom {
-  background-image: linear-gradient(to right, #7d4ea3, #b286d6);
-  border-top: 5px solid #9c9b9b;
-}
-</style>

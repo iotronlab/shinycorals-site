@@ -33,15 +33,15 @@
       </v-row>
     </section>
 
-    <section class="Classroom mt-20 mb-6 pt-4" id="ClassroomProgrammes">
+    <section class="mt-20 mb-6 pt-4" id="ClassroomProgrammes">
       <h1 class="text-h3 text-center ma-4">Classroom Programmes</h1>
       <p class="text--disabled text-center ma-4">
         Designed to develope a child's seven areas of learning.
       </p>
 
-      <section class="Programdetail">
+      <v-sheet rounded="lg" color="primary">
         <ProgramDetail />
-      </section>
+      </v-sheet>
     </section>
 
     <v-container class="mb-10">
@@ -91,13 +91,6 @@ export default {
 </script>
 
 <style scoped>
-.Classroom {
-  background-image: linear-gradient(to right, #f5ccfa, #fdfdfd);
-}
-.Programdetail {
-  background-image: linear-gradient(to right, #d9a7c7, #fffcdc);
-}
-
 .button_More {
   width: 30%;
   height: 110%;

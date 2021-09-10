@@ -9,13 +9,10 @@
               :max-width="$vuetify.breakpoint.lgAndUp ? 45 : 35"
             ></v-img>
           </nuxt-link>
-          <h1 class="text-h6 ml-8 mt-2 white--text">
-            Shiny Corals Pre-School
-          </h1></v-row
+          <h1 class="text-h6 ml-8 mt-2">Shiny Corals Pre-School</h1></v-row
         >
         <v-col sm="7">
           <v-list-item
-            class="white--text"
             v-for="item in navLinks"
             :key="item.title"
             :to="item.to"
@@ -29,14 +26,14 @@
         </v-col>
       </v-col>
       <v-col col="12" sm="5">
-        <h1 class="text-h5 white--text">GET IN TOUCH</h1>
-        <h1 class="text-h6 white--text">Shiny Corals PreSchool</h1>
-        <p class="white--text">
+        <h1 class="text-h5">GET IN TOUCH</h1>
+        <h1 class="text-h6">Shiny Corals PreSchool</h1>
+        <p class="">
           West Bankim Pally, MADHYAMGRAM - 700129.<br />contact@shinycorals.com
         </p>
 
-        <p class="white--text">QUESTIONS? CALL:<br />9903067468</p>
-        <p class="white--text">
+        <p class="">QUESTIONS? CALL:<br />9903067468</p>
+        <p class="">
           <v-btn href="https://www.google.com/" target="_blank">
             Open in Google Maps</v-btn
           >

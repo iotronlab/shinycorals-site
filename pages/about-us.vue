@@ -30,18 +30,20 @@
     </div> -->
 
     <div>
-      <v-timeline class="text-left">
+      <v-timeline :dense="$vuetify.breakpoint.smAndDown">
         <v-timeline-item
           v-for="(service, i) in services"
           :key="i"
           :color="service.color"
+          :icon="service.number"
+          fill-dot
         >
-          <template v-slot:opposite>
+          <!-- <template v-slot:opposite>
             <span
               :class="`text-h2 font-weight-bold ${service.color}--text`"
               v-text="service.number"
             ></span
-          ></template>
+          ></template> -->
           <div>
             <h2 :class="`text-h6  mb-4 black--text`">
               {{ service.heading }}
@@ -57,32 +59,37 @@
     </div>
 
     <v-container class="mt-16 mb=12">
-      <v-card-title class="text-h4"> WHO WE ARE AND WHAT WE DO </v-card-title>
+      <v-row>
+        <v-col col="12" lg="6">
+          <h1 class="text-h4">WHO WE ARE AND WHAT WE DO</h1>
 
-      <v-card-subtitle class="text-body-1 grey--text">
-        <h3>
-          SHINY CORALS PRESCHOOL is very methodical and new-age conceptual
-          preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool
-          concentrates on the overall development of children. With its very
-          rich curriculum for children’s 7 winged developments, it introduces
-          digital smart classroom for every class. We strongly believe that
-          learning begins with the family; the school’s goal is to extend and
-          develope that process in a spirit of cooperation among students,
-          teachers, and parents. We also believe that a small student to teacher
-          ratio is of utmost importance to give students the attention they need
-          to reach their full potential. "We value trust, fairness, cooperation,
-          and sensitivity, and expect students to learn to reach outside
-          themselves and respect the dignity of others. Our students will not
-          only graduate from SHINY CORALS PRESCHOOL with strong academic skills
-          and a readiness for high school, they will also grow as individuals
-          and learn about the importance of social responsibility." Our Teachers
-          are well trained educators and having fair experience in education
-          sectors. Our teaching Assistants are well groomed and very well
-          behaved which will win hearts of our children. Our staffs are always
-          helpful via conferences and monthly meetings throughout the school
-          year.
-        </h3>
-      </v-card-subtitle>
+          <h3 class="text-body-1 grey--text">
+            SHINY CORALS PRESCHOOL is very methodical and new-age conceptual
+            preschool of ESHANPUTRA LEARNWISE. Established in 2019, this
+            preschool concentrates on the overall development of children. With
+            its very rich curriculum for children’s 7 winged developments, it
+            introduces digital smart classroom for every class. We strongly
+            believe that learning begins with the family; the school’s goal is
+            to extend and develope that process in a spirit of cooperation among
+            students, teachers, and parents. We also believe that a small
+            student to teacher ratio is of utmost importance to give students
+            the attention they need to reach their full potential. "We value
+            trust, fairness, cooperation, and sensitivity, and expect students
+            to learn to reach outside themselves and respect the dignity of
+            others. Our students will not only graduate from SHINY CORALS
+            PRESCHOOL with strong academic skills and a readiness for high
+            school, they will also grow as individuals and learn about the
+            importance of social responsibility." Our Teachers are well trained
+            educators and having fair experience in education sectors. Our
+            teaching Assistants are well groomed and very well behaved which
+            will win hearts of our children. Our staffs are always helpful via
+            conferences and monthly meetings throughout the school year.
+          </h3>
+        </v-col>
+        <v-col col="12" lg="6">
+          <v-img :src="require('@/assets/img/Sampa.jpg')"></v-img>
+        </v-col>
+      </v-row>
     </v-container>
 
     <!-- <v-container >
@@ -265,31 +272,31 @@ export default {
         {
           heading: 'COMMUNICATION AND LANGUAGE',
           description: `Children are encouraged to extend their vocabulary and fluency by talking, listening and responding to stories, songs and rhymes in small and large groups.  Children learn the purpose of writing and how to draw and write symbols for themselves.  Children are encouraged to give their attention to what others say and respond appropriately.  Children are also encouraged to follow simple instructions and answer ‘how’ and ‘why’ questions at group discussions.`,
-          number: 1,
+          number: '1',
           color: 'pink',
         },
         {
           heading: 'PHYSICAL DEVELOPMENT',
           description: `Children learn how to stay healthy by everyday morning yoga which will develope their mental calmness, physical and mental balance. They also develop the fine motor skills they will need to use tools, including pens, pencils and scissors and to handle small objects safely and with increasing control. They understand about the importance of, and how to look after, their bodies when we discuss health and safe-care with them. At snack times, we discuss about good and healthy food.`,
-          number: 2,
+          number: '2',
           color: 'pink',
         },
         {
           heading: 'PERSONAL, EMOTIONAL AND SOCIAL DEVELOPMENT',
           description: `Children are individually supported in developing confidence, autonomy and self respect. They are encouraged to work and concentrate independently and also to take part in the life of the Pre-School, sharing and cooperating with other children and adults. They learn to express their feelings for others, make choices and respect each other. All children are given the opportunity to take responsibility for themselves, for other people and for the building and equipment. The children are encouraged to play co-operatively and show sensitivity to others around them when playing with toys.`,
-          number: 3,
+          number: '3',
           color: 'pink',
         },
         {
           heading: 'LITERACY',
           description: `Children are encouraged to link sounds and letters, and to begin to read and write. The children have access to a wide range of reading materials (books, poems) to ignite their interest. Our small library gives every child the opportunity to become familiar with books`,
-          number: 4,
+          number: '4',
           color: 'pink',
         },
         {
           heading: 'MATHEMATICS',
           description: `Children become familiar with counting, understanding and using numbers, to describe shapes, spaces and measure. We use songs, games, digital board and picture books to help children to become aware of number sequences and simple mathematical operations. We also use educational toys such as shape sorters to help with their understanding.`,
-          number: 5,
+          number: '5',
           color: 'pink',
         },
         {
@@ -298,13 +305,13 @@ export default {
                     Children learn about the world in which they live, their community and environment by assisting with seasonal planting and visiting local areas. This aids their understanding of caring for their local environment.
                     They learn how to use the right tool for the task.  They can also learn how to use computers through various games we have, aided by a child-friendly mouse to navigate around the page.
                     Children also will celebrate different important days of the year to become an Indian as well as a World Citizen.`,
-          number: 6,
+          number: '6',
           color: 'pink',
         },
         {
           heading: 'EXPRESSIVE ARTS AND DESIGN',
           description: `Children are encouraged to use creativity to express their ideas and feelings. Paint, glue, crayons and pencils as well as natural and recycled resources help them to explore colour, shape and texture.  Children act out stories, sing, dance, and play musical instruments and there are many opportunities for imaginative role-play. We will use different stories to teach role play to the children.`,
-          number: 7,
+          number: '7',
           color: 'pink',
         },
       ],

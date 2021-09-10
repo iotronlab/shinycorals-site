@@ -15,10 +15,10 @@
       <About />
     </section>
 
-    <section id="upper-classroom" class="upper-classroom pa-8 text-center">
+    <section id="upper-classroom" class="upper-classroom text-center">
       <v-row class="mt-15">
         <v-col cols="12" sm="6" md="8">
-          <h1 class="text-h5 red--text">
+          <h1 class="text-h5 red--text pa-8">
             "Early childhood education is a very important aspect of a child’s
             life. Human brain is always receptive
             <span><strong>no matter how it learns</strong></span> ."

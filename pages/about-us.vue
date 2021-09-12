@@ -1,14 +1,12 @@
 <template>
   <v-container>
     <v-col class="mb-10" justify="center" align="center">
-      <h1 class="text-h4 grey--text">
-        <span class="text-h3 red--text">Seven Core</span> Areas of Learning
+      <h1 class="text-h4">
+        <span class="warning--text text-h3">Seven Core</span> Areas of Learning
       </h1>
 
-      <p class="text-h5 grey--text">
-        Based on the<span class="black--text"
-          ><strong> Core Concept of PlaySchool</strong></span
-        >
+      <p class="text-h5">
+        Based on the<span><strong> Core Concept of PlaySchool</strong></span>
       </p>
     </v-col>
 
@@ -28,40 +26,109 @@
             </v-timeline-item>
         </v-timeline>
     </div> -->
-    <!--
+
     <v-timeline :dense="$vuetify.breakpoint.smAndDown">
       <v-timeline-item
         v-for="(service, i) in services"
         :key="i"
-        :color="service.color"
+        color="info"
         :icon="service.number"
         fill-dot
       >
         <template v-slot:opposite>
-            <span
-              :class="`text-h2 font-weight-bold ${service.color}--text`"
-              v-text="service.number"
-            ></span
-          ></template>
+          <span class="text-h2 font-weight-bold"></span
+        ></template>
         <div>
-          <h2 :class="`text-h6  mb-4 black--text`">
+          <h2 class="text-h6 mb-4">
             {{ service.heading }}
           </h2>
           <div>
-            <h2 :class="`text-body-1 mb-4 grey--text`">
+            <h2 class="text-body-1 mb-4">
               {{ service.description }}
             </h2>
           </div>
         </div>
       </v-timeline-item>
-    </v-timeline> -->
+    </v-timeline>
 
+    <v-container class="mt-10 mb-10">
+      <v-row no-gutters class="pa-8">
+        <h1 class="text-h4 mb-5 mt-10">WHO WE ARE AND WHAT WE DO</h1>
+        <h3 class="text-body-1">
+          SHINY CORALS PRESCHOOL is very methodical and new-age conceptual
+          preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool
+          concentrates on the overall development of children. With its very
+          rich curriculum for children’s 7 winged developments, it introduces
+          digital smart classroom for every class. We strongly believe that
+          learning begins with the family; the school’s goal is to extend and
+          develope that process in a spirit of cooperation among students,
+          teachers, and parents. We also believe that a small student to teacher
+          ratio is of utmost importance to give students the attention they need
+          to reach their full potential. "We value trust, fairness, cooperation,
+          and sensitivity, and expect students to learn to reach outside
+          themselves and respect the dignity of others. Our students will not
+          only graduate from SHINY CORALS PRESCHOOL with strong academic skills
+          and a readiness for high school, they will also grow as individuals
+          and learn about the importance of social responsibility." Our Teachers
+          are well trained educators and having fair experience in education
+          sectors. Our teaching Assistants are well groomed and very well
+          behaved which will win hearts of our children. Our staffs are always
+          helpful via conferences and monthly meetings throughout the school
+          year.
+        </h3>
+      </v-row>
+    </v-container>
     <v-container>
-      <v-row no-gutters>
-        <v-col col="12" lg="6">
-          <h1 class="text-h4">WHO WE ARE AND WHAT WE DO</h1>
+      <v-row justify="center">
+        <v-col cols="12" align="center"
+          ><h1 class="text-h4">FOUNDER'S VISION</h1></v-col
+        >
+        <v-col col="12" lg="3" class="pa-8" justify="center">
+          <div>
+            <v-img
+              contain
+              height="300"
+              :src="require('@/assets/img/Sampa.jpg')"
+            ></v-img>
+          </div>
 
-          <h3 class="text-body-1 grey--text">
+          <h1 class="text-h6">Sampa Bhowmick</h1>
+          <h1 class="text-h6">Founder, Shiny Corals</h1>
+        </v-col>
+
+        <v-col col="12" lg="8" class="pa-8" justify="center">
+          <h3 class="text-body-1">
+            She is a Graduate in English from Calcutta University. She did
+            Computer Diploma and CIC from IGNOU. Later, she did two diplomas in
+            IELTS from British Council. She has a glittering 9 years experience
+            in different sectors. Out of these, 4 years she worked and learned
+            the ways of education system. Then she realized the possibilities of
+            this sector and its impact on children’s lives and our society.
+            <br />
+            She designed the Seven Winged Curriculum for the all round
+            development of children. According to her, “Early childhood
+            education is a very important aspect of a child’s life. Human brain
+            is always receptive no matter how it learns. After birth, a child
+            starts to learn whatever is going on around. As the brain of a child
+            is like a blank paper and it writes whatever is going around, it is
+            important for every parent to take care of what is scratching on
+            that paper. Here comes the importance of preschools. Now a days,
+            preschools are designed to give overall education to look after a
+            child’s development. And keeping that in mind we, at SHINY CORALS,
+            set a curriculum that ensures a child’s seven winged developments
+            with help of audio-visual and practical learning with care and
+            tenderness. To make a great nation we need to concentrate to make a
+            great human being from early childhood.”
+          </h3>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- <v-container class="mt-10 mb-10">
+      <v-row no-gutters>
+        <v-col col="12" lg="4" class="pa-8">
+          <h1 class="text-h5">WHO WE ARE AND WHAT WE DO</h1>
+          <h3 class="text-body-1">
             SHINY CORALS PRESCHOOL is very methodical and new-age conceptual
             preschool of ESHANPUTRA LEARNWISE. Established in 2019, this
             preschool concentrates on the overall development of children. With
@@ -84,15 +151,48 @@
             conferences and monthly meetings throughout the school year.
           </h3>
         </v-col>
-        <v-col col="12" lg="6">
-          <v-img
-            contain
-            height="300"
-            :src="require('@/assets/img/Sampa.jpg')"
-          ></v-img>
+        <v-col col="12" lg="4" class="pa-8">
+          <h1 class="text-h5">FOUNDER'S VISION</h1>
+          <div class="justify-space-around">
+            <v-img
+              class="mt-8 mb-9"
+              contain
+              height="300"
+              :src="require('@/assets/img/Sampa.jpg')"
+            ></v-img>
+          </div>
+          <h3 class="text-body-1">
+            <h1 class="text-h6">Sampa Bhowmick</h1>
+            <h1 class="text-h6">Founder, Shiny Corals</h1>
+
+            She is a Graduate in English from Calcutta University. She did
+            Computer Diploma and CIC from IGNOU. Later, she did two diplomas in
+            IELTS from British Council. She has a glittering 9 years experience
+            in different sectors. Out of these, 4 years she worked and learned
+            the ways of education system. Then she realized the possibilities of
+            this sector and its impact on children’s lives and our society.
+          </h3>
+        </v-col>
+        <v-col col="12" lg="4" class="pa-8">
+          <h3 class="text-body-1">
+            She designed the Seven Winged Curriculum for the all round
+            development of children. According to her, “Early childhood
+            education is a very important aspect of a child’s life. Human brain
+            is always receptive no matter how it learns. After birth, a child
+            starts to learn whatever is going on around. As the brain of a child
+            is like a blank paper and it writes whatever is going around, it is
+            important for every parent to take care of what is scratching on
+            that paper. Here comes the importance of preschools. Now a days,
+            preschools are designed to give overall education to look after a
+            child’s development. And keeping that in mind we, at SHINY CORALS,
+            set a curriculum that ensures a child’s seven winged developments
+            with help of audio-visual and practical learning with care and
+            tenderness. To make a great nation we need to concentrate to make a
+            great human being from early childhood.”
+          </h3>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
 
     <!-- <v-container >
         <v-row>
@@ -124,7 +224,7 @@
     </v-container> -->
 
     <v-row class="mt-9" justify="center">
-      <h1 class="text-h4 red--text mt-12 text-decoration-underline">
+      <h1 class="text-h4 warning--text mt-12 text-decoration-underline">
         OUR UNIQUE APPROACH
       </h1>
       <v-row class="mt-11">
@@ -136,7 +236,7 @@
           class="pa-8"
         >
           <v-img :src="service1.img" height="70" width="70"></v-img>
-          <h1 class="text-h5 head">
+          <h1 class="warning--text text-h5 head">
             {{ service1.heading1 }}
           </h1>
 
@@ -219,10 +319,10 @@
     <v-container>
       <v-row class="mt-15" justify="center">
         <h1 class="text-h4 ma-5">
-          <span class="text-h3 red--text"> F.A.Q </span>(FREQUENTLY ASKED
+          <span class="warning--text text-h3"> F.A.Q </span>(FREQUENTLY ASKED
           QUESTIONS)
         </h1>
-        <h1 class="text-h6 grey--text pa-3">
+        <h1 class="text-h6 pa-3">
           CONTACT US DIRECTLY IF YOU DON'T FIND THE INFORMATION NEEDED BELOW.
         </h1>
 
@@ -275,31 +375,26 @@ export default {
           heading: 'COMMUNICATION AND LANGUAGE',
           description: `Children are encouraged to extend their vocabulary and fluency by talking, listening and responding to stories, songs and rhymes in small and large groups.  Children learn the purpose of writing and how to draw and write symbols for themselves.  Children are encouraged to give their attention to what others say and respond appropriately.  Children are also encouraged to follow simple instructions and answer ‘how’ and ‘why’ questions at group discussions.`,
           number: '1',
-          color: 'pink',
         },
         {
           heading: 'PHYSICAL DEVELOPMENT',
           description: `Children learn how to stay healthy by everyday morning yoga which will develope their mental calmness, physical and mental balance. They also develop the fine motor skills they will need to use tools, including pens, pencils and scissors and to handle small objects safely and with increasing control. They understand about the importance of, and how to look after, their bodies when we discuss health and safe-care with them. At snack times, we discuss about good and healthy food.`,
           number: '2',
-          color: 'pink',
         },
         {
           heading: 'PERSONAL, EMOTIONAL AND SOCIAL DEVELOPMENT',
           description: `Children are individually supported in developing confidence, autonomy and self respect. They are encouraged to work and concentrate independently and also to take part in the life of the Pre-School, sharing and cooperating with other children and adults. They learn to express their feelings for others, make choices and respect each other. All children are given the opportunity to take responsibility for themselves, for other people and for the building and equipment. The children are encouraged to play co-operatively and show sensitivity to others around them when playing with toys.`,
           number: '3',
-          color: 'pink',
         },
         {
           heading: 'LITERACY',
           description: `Children are encouraged to link sounds and letters, and to begin to read and write. The children have access to a wide range of reading materials (books, poems) to ignite their interest. Our small library gives every child the opportunity to become familiar with books`,
           number: '4',
-          color: 'pink',
         },
         {
           heading: 'MATHEMATICS',
           description: `Children become familiar with counting, understanding and using numbers, to describe shapes, spaces and measure. We use songs, games, digital board and picture books to help children to become aware of number sequences and simple mathematical operations. We also use educational toys such as shape sorters to help with their understanding.`,
           number: '5',
-          color: 'pink',
         },
         {
           heading: 'UNDERSTANDING THE WORLD',
@@ -308,13 +403,11 @@ export default {
                     They learn how to use the right tool for the task.  They can also learn how to use computers through various games we have, aided by a child-friendly mouse to navigate around the page.
                     Children also will celebrate different important days of the year to become an Indian as well as a World Citizen.`,
           number: '6',
-          color: 'pink',
         },
         {
           heading: 'EXPRESSIVE ARTS AND DESIGN',
           description: `Children are encouraged to use creativity to express their ideas and feelings. Paint, glue, crayons and pencils as well as natural and recycled resources help them to explore colour, shape and texture.  Children act out stories, sing, dance, and play musical instruments and there are many opportunities for imaginative role-play. We will use different stories to teach role play to the children.`,
           number: '7',
-          color: 'pink',
         },
       ],
 

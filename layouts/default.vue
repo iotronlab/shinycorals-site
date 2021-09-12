@@ -1,9 +1,15 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed app temporary>
+    <v-navigation-drawer
+      v-model="drawer"
+      fixed
+      app
+      temporary
+      color="rgba(0, 0, 0, 0.2)"
+    >
       <LazyNavDrawer :socialLinks="socialLinks" :navLinks="navLinks" />
     </v-navigation-drawer>
-    <v-app-bar id="nav" fixed app flat class="nav-transparent" extended>
+    <v-app-bar id="nav" fixed app flat class="nav-transparent" extended c>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
         aria-label="nav-button"
@@ -37,7 +43,7 @@
         >
       </v-row>
       <v-btn
-        color="secondary"
+        color=" success"
         class="ml-auto font-weight-bold"
         rounded
         href="tel:+919903067468 "
@@ -53,7 +59,11 @@
       <Social/>
     </section> -->
 
-    <LazyFooter :socialLinks="socialLinks" :navLinks="navLinks" />
+    <LazyFooter
+      :socialLinks="socialLinks"
+      :navLinks="navLinks"
+      :icons="icons"
+    />
   </v-app>
 </template>
 

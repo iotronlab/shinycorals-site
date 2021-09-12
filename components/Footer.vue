@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="primary">
+  <v-footer color="primary" class="grey--text">
     <v-container fluid>
       <nuxt-link :to="{ name: 'index' }">
         <v-img
@@ -9,24 +9,35 @@
         ></v-img>
       </nuxt-link>
       <v-row justify="center">
-        <v-col col="12" lg="4" class="text-md-right">
+        <v-col col="12" lg="4" class="text-md-right grey--text">
           <h1 class="text-h6 mt-2">Shiny Corals Pre-School</h1>
 
           <!-- <h1 class="text-h6">Shiny Corals PreSchool</h1> -->
-          <p>
-            West Bankim Pally, MADHYAMGRAM - 700129.<br />contact@shinycorals.com
-          </p>
+          <p>West Bankim Pally, MADHYAMGRAM - 700129.</p>
 
-          <p>QUESTIONS? <br />CALL:9903067468</p>
+          <v-btn
+            text
+            class="caption"
+            href="mailto:contact@shinycorals.com"
+            target="_blank"
+          >
+            <v-icon class="mr-1">{{ icons.email }}</v-icon
+            ><strong>Mail US</strong>
+          </v-btn>
+          <br />
 
-          <v-row no-gutters justify="end" class="mb-2">
+          <v-btn text class="text-h6" href="tel:+919903067468" target="_blank">
+            <v-icon>{{ icons.call }}</v-icon
+            >+91-9903067468
+          </v-btn>
+
+          <v-row no-gutters class="mb-2 justify-end">
             <v-btn
               icon
               v-for="social in socialLinks"
               :key="social.name"
               :href="social.url"
               target="_blank"
-              rel="noopener"
               :aria-label="social.name"
               ><v-icon v-html="social.icon"></v-icon
             ></v-btn>
@@ -35,6 +46,7 @@
 
         <v-col col="12" lg="4">
           <v-list-item
+            class="gray--text"
             v-for="item in navLinks"
             :key="item.title"
             :to="item.to"
@@ -68,7 +80,10 @@ export default {
       type: Array,
       required: true,
     },
+    icons: {
+      type: Object,
+      required: true,
+    },
   },
 }
 </script>
-

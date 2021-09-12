@@ -70,7 +70,11 @@ export default {
         light: {
           primary: '#FEE2E2',
           accent: '#A78BFA',
-          // secondary: colors.amber.darken3,
+          success: '#22C55E',
+          info: '#EF4444',
+          warning: '#DC2626',
+          gray: '#27272A',
+          lightgray:'#D1D5DB',
           // info: colors.teal.lighten1,
           // warning: colors.amber.base,
           // error: colors.deepOrange.accent4,

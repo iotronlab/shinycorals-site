@@ -12,7 +12,7 @@
         <source src="@/assets/image/Gravity.mp4" type="video/mp4" />
       </video>
     </v-sheet> -->
-    {{ activeImage }}
+
     <v-row>
       <v-col cols="12" sm="4" v-for="(image, i) in gallery" :key="i">
         <v-card @click="openSlider(i)"> <v-img :src="image.img" /></v-card>
@@ -32,23 +32,17 @@
       </v-btn>
       <!-- <v-card> -->
       <!-- <v-card-title class="text-h5 grey lighten-2"> -->
+
       <v-carousel
-        height="700"
+        height="500"
         hide-delimiter-background
         show-arrows-on-hover
         v-model="activeImage"
       >
         <v-carousel-item v-for="(slide, i) in gallery" :key="i">
           <!-- <v-sheet :color="colors[i]" height="100%"> -->
-          <v-row class="fill-height" align="center" justify="center">
-            <div>
-              <v-img
-                :src="slide.img"
-                class="image"
-                height="100%"
-                width="100%"
-              />
-            </div>
+          <v-row align="center" justify="center">
+            <v-img :src="slide.img" contain height="500" />
           </v-row>
           <!-- </v-sheet> -->
         </v-carousel-item>

@@ -17,23 +17,23 @@
 
     <section id="upper-classroom" class="upper-classroom text-center">
       <v-row class="mt-15" justify="center">
-        <v-col cols="12" lg="9">
-          <h1 class="text-h5 red--text pa-8">
+        <v-col cols="12" lg="8">
+          <h1 class="warning--text text-h5">
             "Early childhood education is a very important aspect of a child’s
             life. Human brain is always receptive
             <span><strong>no matter how it learns</strong></span> ."
           </h1>
           <p>Sampa Bhowmick ~ Founder.</p>
         </v-col>
-        <v-col cols="6" lg="3" align-self="center">
-          <v-btn>Find Out More</v-btn>
+        <v-col cols="6" lg="2" align-self="center">
+          <v-btn color="lightgray">Find Out More</v-btn>
         </v-col>
       </v-row>
     </section>
 
     <section class="mt-20 mb-6 pt-4" id="ClassroomProgrammes">
       <h1 class="text-h3 text-center ma-4">Classroom Programmes</h1>
-      <p class="text--disabled text-center ma-4">
+      <p class="lightgray--text text-center ma-4">
         Designed to develope a child's seven areas of learning.
       </p>
 
@@ -49,15 +49,9 @@
 </template>
 
 <script>
-import { mdiCheckDecagram } from '@mdi/js'
-
 export default {
   data() {
-    return {
-      icons: {
-        check: mdiCheckDecagram,
-      },
-    }
+    return {}
   },
   mounted() {
     if (this.$route.hash) {
@@ -89,11 +83,6 @@ export default {
 </script>
 
 <style scoped>
-.button_More {
-  width: 30%;
-  height: 110%;
-}
-
 .upper-classroom {
   border-top: 2px solid #f1f1f1;
   margin-top: 7%;

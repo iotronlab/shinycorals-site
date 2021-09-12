@@ -1,9 +1,9 @@
 <template>
-  <v-container class="">
+  <v-container>
     <v-row>
-      <v-col v-for="(Program, i) in Programs" :key="i" cols="12" sm="4">
+      <v-col v-for="(Program, i) in Programs" :key="i" cols="12" lg="4">
         <v-timeline dense clipped>
-          <v-timeline-item fill-dot class="mb-4" color="red" large>
+          <v-timeline-item fill-dot class="mb-4" color="info" large>
             <template v-slot:icon>
               <v-avatar>
                 <v-img :src="Program.img"></v-img>
@@ -23,8 +23,8 @@
             <v-col v-for="(data, i) in Program.sub" :key="i" cols="12">
               <v-timeline-item
                 class="mb-4"
-                color="red"
-                icon-color="grey lighten-2"
+                color="info"
+                icon-color="secondary"
                 small
               >
                 {{ data.p }}

@@ -11,11 +11,12 @@
       </v-sheet>
     </v-row>
 
-    <About />
+    <v-container>
+      <About />
+    </v-container>
 
-    <!-- issue here -->
-    <!-- <section id="upper-classroom" class="upper-classroom text-center">
-      <v-row class="mt-15" justify="center">
+    <section id="upper-classroom" class="upper-classroom text-center pa-8">
+      <v-row no-gutters>
         <v-col cols="12" lg="8">
           <h1 class="warning--text text-h5">
             "Early childhood education is a very important aspect of a child’s
@@ -24,22 +25,23 @@
           </h1>
           <p>Sampa Bhowmick ~ Founder.</p>
         </v-col>
-        <v-col cols="6" lg="2" align-self="center">
+        <v-col cols="12" lg="4">
           <v-btn color="lightgray">Find Out More</v-btn>
         </v-col>
       </v-row>
-    </section> -->
+    </section>
+    <v-divider></v-divider>
 
-    <section class="mt-20 mb-6 pt-4" id="ClassroomProgrammes">
-      <h1 class="text-h3 text-center ma-4">Classroom Programmes</h1>
-      <p class="lightgray--text text-center ma-4">
+    <v-container class="mt-10 mb-8" id="ClassroomProgrammes">
+      <h1 class="text-h4 text-center">Classroom Programmes</h1>
+      <p class="lightgray--text text-center">
         Designed to develope a child's seven areas of learning.
       </p>
 
-      <v-sheet rounded="lg" color="primary">
+      <v-card rounded="lg" color="primary">
         <ProgramDetail />
-      </v-sheet>
-    </section>
+      </v-card>
+    </v-container>
 
     <v-container class="mb-10">
       <Review />
@@ -81,10 +83,12 @@ export default {
 }
 </script>
 
-<style scoped>
+
+<!--<style scoped>
 .upper-classroom {
   border-top: 2px solid #f1f1f1;
   margin-top: 7%;
   margin-bottom: 7%;
 }
 </style>
+-->

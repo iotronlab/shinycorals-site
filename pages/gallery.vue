@@ -15,7 +15,9 @@
 
     <v-row>
       <v-col cols="12" sm="4" v-for="(image, i) in gallery" :key="i">
-        <v-card @click="openSlider(i)"> <v-img :src="image.img" /></v-card>
+        <v-card height="300" @click="openSlider(i)">
+          <v-img :src="image.img" contain
+        /></v-card>
       </v-col>
     </v-row>
 

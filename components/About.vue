@@ -1,43 +1,37 @@
 <template>
-  <v-container>
-    <v-row no-gutters justify="center">
-      <v-col cols="12">
-        <h1 class="text-h3 text-center pa-2">
-          <strong>Shiny Corals - a revolution in PreSchool education.</strong>
-        </h1>
-        <p class="text-h5 text-center">
-          One of the very best for your child, nurturing curiosity with
-          technology!
-        </p>
-      </v-col>
-      <v-col cols="12" lg="3" class="pa-2">
-        <h1>Why<br />Choose<br />US?</h1>
-        <p>
-          <span><strong>Education through play. </strong></span>Think of us as a
-          playschool with a well structured curriculum full of activities that
-          teaches children in a innovative and enjoyable manner. Our goal is to
-          develope a child's overall skill set to make them ready for our
-          society.
-        </p>
-        <v-btn>Discover More</v-btn>
-      </v-col>
-      <v-col cols="12" lg="9">
-        <v-row v-for="n in 1" :key="n" no-gutters>
-          <v-col
-            v-for="(Detail, i) in Details"
-            :key="i"
-            class="pa-3"
-            cols="12"
-            lg="6"
-          >
-            <v-img :src="Detail.img" height="80" width="80"></v-img>
-            <h1>{{ Detail.header }}</h1>
-            <p>{{ Detail.id }}</p>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-card class="pa-8">
+    <v-container>
+      <h1 class="text-h3 text-center">
+        <strong>Shiny Corals - a revolution in PreSchool education.</strong>
+      </h1>
+      <p class="text-h5 text-center">
+        One of the very best for your child, nurturing curiosity with
+        technology!
+      </p>
+      <v-row class="mt-10">
+        <v-col cols="12" lg="4">
+          <h1>Why<br />Choose<br />US?</h1>
+          <p>
+            <span><strong>Education through play. </strong></span>Think of us as
+            a playschool with a well structured curriculum full of activities
+            that teaches children in a innovative and enjoyable manner. Our goal
+            is to develope a child's overall skill set to make them ready for
+            our society.
+          </p>
+          <v-btn>Discover More</v-btn>
+        </v-col>
+        <v-col cols="12" lg="8">
+          <v-row>
+            <v-col v-for="(Detail, i) in Details" :key="i" cols="12" lg="6">
+              <v-img :src="Detail.img" height="80" width="80"></v-img>
+              <h1>{{ Detail.header }}</h1>
+              <p>{{ Detail.id }}</p>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 

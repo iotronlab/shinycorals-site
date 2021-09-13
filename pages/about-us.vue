@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid>
-    <!-- <v-col class="mb-10" justify="center" align="center">
+  <v-container>
+    <v-col class="mb-10" justify="center" align="center">
       <h1 class="text-h4">
         <span class="warning--text text-h3">Seven Core</span> Areas of Learning
       </h1>
@@ -8,7 +8,7 @@
       <p class="text-h5">
         Based on the<span><strong> Core Concept of PlaySchool</strong></span>
       </p>
-    </v-col> -->
+    </v-col>
 
     <!-- <div>
       <v-timeline
@@ -27,29 +27,25 @@
         </v-timeline>
     </div> -->
 
-    <!-- <v-timeline :dense="$vuetify.breakpoint.smAndDown">
-      <v-timeline-item
-        v-for="(service, i) in services"
-        :key="i"
-        color="info"
-        :icon="service.number"
-        fill-dot
-      >
-        <template v-slot:opposite>
-          <span class="text-h2 font-weight-bold"></span
-        ></template>
-        <div>
+    <v-card>
+      <v-timeline :dense="$vuetify.breakpoint.mdAndDown">
+        <v-timeline-item
+          class="text-left ma-5"
+          v-for="(service, i) in services"
+          :key="i"
+          color="info"
+          :icon="service.number"
+          fill-dot
+        >
           <h2 class="text-h6 mb-4">
             {{ service.heading }}
           </h2>
-          <div>
-            <h2 class="text-body-1 mb-4">
-              {{ service.description }}
-            </h2>
-          </div>
-        </div>
-      </v-timeline-item>
-    </v-timeline> -->
+          <h2 class="text-body-1 mb-4">
+            {{ service.description }}
+          </h2>
+        </v-timeline-item>
+      </v-timeline>
+    </v-card>
 
     <v-container class="mt-10 mb-10">
       <v-row no-gutters class="pa-8">
@@ -223,10 +219,11 @@
         </v-row>
     </v-container> -->
 
-    <v-row class="mt-9" justify="center">
-      <h1 class="text-h4 warning--text mt-12 text-decoration-underline">
+    <v-container>
+      <h1 class="text-h4 warning--text mt-12 text-center">
         OUR UNIQUE APPROACH
       </h1>
+      <v-divider></v-divider>
       <v-row class="mt-11">
         <v-col
           v-for="(service1, i) in services1"
@@ -260,7 +257,7 @@
           </v-row>
         </v-col>
       </v-row>
-    </v-row>
+    </v-container>
 
     <!-- <v-container class="pa-8 ma-12">
       <v-row>

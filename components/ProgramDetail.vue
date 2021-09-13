@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row no-gutters>
       <v-col v-for="(Program, i) in Programs" :key="i" cols="12" lg="4">
         <v-timeline dense clipped>
           <v-timeline-item fill-dot class="mb-4" color="info" large>

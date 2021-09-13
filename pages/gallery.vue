@@ -13,11 +13,15 @@
       </video>
     </v-sheet> -->
 
-    <v-row>
-      <v-col cols="12" sm="4" v-for="(image, i) in gallery" :key="i">
-        <v-card height="300" @click="openSlider(i)">
-          <v-img :src="image.img" contain
-        /></v-card>
+    <v-row no-gutters>
+      <v-col
+        cols="12"
+        sm="4"
+        v-for="(image, i) in gallery"
+        :key="i"
+        class="pa-1"
+      >
+        <v-img :src="image.img" height="400" @click="openSlider(i)" />
       </v-col>
     </v-row>
 

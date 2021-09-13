@@ -11,11 +11,10 @@
       </v-sheet>
     </v-row>
 
-    <section>
-      <About />
-    </section>
+    <About />
 
-    <section id="upper-classroom" class="upper-classroom text-center">
+    <!-- issue here -->
+    <!-- <section id="upper-classroom" class="upper-classroom text-center">
       <v-row class="mt-15" justify="center">
         <v-col cols="12" lg="8">
           <h1 class="warning--text text-h5">
@@ -29,7 +28,7 @@
           <v-btn color="lightgray">Find Out More</v-btn>
         </v-col>
       </v-row>
-    </section>
+    </section> -->
 
     <section class="mt-20 mb-6 pt-4" id="ClassroomProgrammes">
       <h1 class="text-h3 text-center ma-4">Classroom Programmes</h1>

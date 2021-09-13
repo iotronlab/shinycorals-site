@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-col class="mb-10" justify="center" align="center">
+  <v-container fluid>
+    <!-- <v-col class="mb-10" justify="center" align="center">
       <h1 class="text-h4">
         <span class="warning--text text-h3">Seven Core</span> Areas of Learning
       </h1>
@@ -8,7 +8,7 @@
       <p class="text-h5">
         Based on the<span><strong> Core Concept of PlaySchool</strong></span>
       </p>
-    </v-col>
+    </v-col> -->
 
     <!-- <div>
       <v-timeline
@@ -27,7 +27,7 @@
         </v-timeline>
     </div> -->
 
-    <v-timeline :dense="$vuetify.breakpoint.smAndDown">
+    <!-- <v-timeline :dense="$vuetify.breakpoint.smAndDown">
       <v-timeline-item
         v-for="(service, i) in services"
         :key="i"
@@ -49,7 +49,7 @@
           </div>
         </div>
       </v-timeline-item>
-    </v-timeline>
+    </v-timeline> -->
 
     <v-container class="mt-10 mb-10">
       <v-row no-gutters class="pa-8">

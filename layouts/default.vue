@@ -1,15 +1,9 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      fixed
-      app
-      temporary
-      color="rgba(0, 0, 0, 0.2)"
-    >
+    <v-navigation-drawer v-model="drawer" fixed app temporary>
       <LazyNavDrawer :socialLinks="socialLinks" :navLinks="navLinks" />
     </v-navigation-drawer>
-    <v-app-bar id="nav" fixed app flat class="nav-transparent" extended c>
+    <v-app-bar id="nav" fixed app flat class="nav-transparent" extended>
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
         aria-label="nav-button"

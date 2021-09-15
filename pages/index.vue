@@ -1,35 +1,29 @@
 <template>
   <v-container fluid class="pa-0">
-    <v-row no-gutters>
-      <v-sheet class="mt-n16" width="100%" color="transparent">
-        <v-img
-          :lazy-src="require('@/assets/img/loader.jpg')"
-          :src="require('@/assets/img/loader.jpg')"
-          eager
-          max-height="850"
-        ></v-img>
-      </v-sheet>
+    <v-sheet style="margin-top: -7rem" width="100%" color="transparent">
+      <v-img
+        :lazy-src="require('@/assets/img/loader.jpg')"
+        :src="require('@/assets/img/loader.jpg')"
+        max-height="800"
+      ></v-img>
+    </v-sheet>
+
+    <About />
+
+    <v-row no-gutters align="center" justify="center" class="text-center">
+      <v-col cols="12" lg="7">
+        <h1 class="warning--text text-h5">
+          "Early childhood education is a very important aspect of a child’s
+          life. Human brain is always receptive
+          <span><strong>no matter how it learns</strong></span> ."
+        </h1>
+        <p>Sampa Bhowmick - Founder.</p>
+      </v-col>
+      <v-col cols="12" lg="3">
+        <v-btn color="accent">Find Out More</v-btn>
+      </v-col>
     </v-row>
 
-    <v-container>
-      <About />
-    </v-container>
-
-    <section id="upper-classroom" class="upper-classroom text-center pa-8">
-      <v-row no-gutters>
-        <v-col cols="12" lg="8">
-          <h1 class="warning--text text-h5">
-            "Early childhood education is a very important aspect of a child’s
-            life. Human brain is always receptive
-            <span><strong>no matter how it learns</strong></span> ."
-          </h1>
-          <p>Sampa Bhowmick ~ Founder.</p>
-        </v-col>
-        <v-col cols="12" lg="4">
-          <v-btn color="lightgray">Find Out More</v-btn>
-        </v-col>
-      </v-row>
-    </section>
     <v-divider></v-divider>
 
     <v-container class="mt-10 mb-8" id="ClassroomProgrammes">

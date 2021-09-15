@@ -1,36 +1,40 @@
 <template>
-  <v-card class="pa-8">
-    <v-container>
-      <h1 class="text-h3 text-center">
-        <strong>Shiny Corals - a revolution in PreSchool education.</strong>
-      </h1>
-      <p class="text-h5 text-center">
-        One of the very best for your child, nurturing curiosity with
-        technology!
-      </p>
-      <v-row class="mt-10">
-        <v-col cols="12" lg="4">
-          <h1>Why<br />Choose<br />US?</h1>
-          <p>
-            <span><strong>Education through play. </strong></span>Think of us as
-            a playschool with a well structured curriculum full of activities
-            that teaches children in a innovative and enjoyable manner. Our goal
-            is to develope a child's overall skill set to make them ready for
-            our society.
-          </p>
-          <v-btn>Discover More</v-btn>
-        </v-col>
-        <v-col cols="12" lg="8">
-          <v-row>
-            <v-col v-for="(Detail, i) in Details" :key="i" cols="12" lg="6">
-              <v-img :src="Detail.img" height="80" width="80"></v-img>
-              <h1>{{ Detail.header }}</h1>
-              <p>{{ Detail.id }}</p>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+  <v-card class="pa-8" flat>
+    <h1 class="text-h3 text-center">
+      <strong class="accent--text">Shiny Corals</strong> a revolution in
+      PreSchool education.
+    </h1>
+    <h2 class="text-center mb-10 font-weight-light">
+      One of the very best for your child, nurturing curiosity with technology!
+    </h2>
+    <v-row no-gutters justify="center">
+      <v-col cols="12" lg="3">
+        <h1 class="text-h4">Why<br />Choose<br />US?</h1>
+        <p>
+          <span><strong>Education through play. </strong></span>Think of us as a
+          playschool with a well structured curriculum full of activities that
+          teaches children in a innovative and enjoyable manner. Our goal is to
+          develope a child's overall skill set to make them ready for our
+          society.
+        </p>
+        <v-btn class="mb-4" color="accent">Discover More</v-btn>
+      </v-col>
+      <v-col cols="12" lg="7">
+        <v-row no-gutters>
+          <v-col
+            v-for="(Detail, i) in Details"
+            :key="i"
+            cols="12"
+            lg="6"
+            class="pa-2"
+          >
+            <v-img :src="Detail.img" height="80" width="80"></v-img>
+            <h1 class="text-h5 my-2">{{ Detail.header }}</h1>
+            <h2 class="text--secondary text-subtitle-1">{{ Detail.id }}</h2>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 

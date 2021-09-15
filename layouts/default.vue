@@ -10,7 +10,13 @@
       >
         <v-icon slot="default">{{ icons.menu }}</v-icon></v-app-bar-nav-icon
       >
-
+      <nuxt-link :to="{ name: 'index' }">
+        <v-img
+          v-if="$vuetify.breakpoint.mdAndDown"
+          :src="require('@/assets/img/shiny_logo.png')"
+          width="50"
+        ></v-img>
+      </nuxt-link>
       <v-row
         no-gutters
         justify="center"
@@ -21,7 +27,8 @@
         <nuxt-link :to="{ name: 'index' }">
           <v-img
             :src="require('@/assets/img/shiny_logo.png')"
-            :max-width="$vuetify.breakpoint.lgAndUp ? 100 : 45"
+            width="100"
+            class="mr-6"
           ></v-img>
         </nuxt-link>
         <v-btn
@@ -37,7 +44,7 @@
         >
       </v-row>
       <v-btn
-        color="lightgray"
+        color="accent"
         class="ml-auto font-weight-bold"
         rounded
         href="tel:+919903067468 "
@@ -84,6 +91,10 @@ export default {
         whatsapp: mdiWhatsapp,
       },
       navLinks: [
+        // {
+        //   title: 'Home',
+        //   to: '/',
+        // },
         {
           title: 'About US',
           to: '/about-us',

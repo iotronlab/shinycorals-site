@@ -68,13 +68,13 @@ export default {
       },
       themes: {
         light: {
-          primary: '#FEE2E2',
-          accent: '#A78BFA',
+          primary: '#FDF2F8',
+          accent: '#5B21B6',
           success: '#22C55E',
           info: '#EF4444',
           warning: '#DC2626',
           gray: '#27272A',
-          lightgray:'#D1D5DB',
+          lightgray: '#D1D5DB',
           // info: colors.teal.lighten1,
           // warning: colors.amber.base,
           // error: colors.deepOrange.accent4,
@@ -87,10 +87,10 @@ export default {
   googleFonts: {
     families: {
       Roboto: {
-        wght: [400],
+        wght: [300, 400],
       },
       Montserrat: {
-        wght: [700],
+        wght: [500, 700],
       },
     },
     display: 'swap',

@@ -5,52 +5,43 @@
         <span class="warning--text text-h3">Seven Core</span> Areas of Learning
       </h1>
 
-      <p class="text-h5">
+      <h2 class="font-weight-light">
         Based on the<span><strong> Core Concept of PlaySchool</strong></span>
-      </p>
+      </h2>
     </v-col>
-
-    <!-- <div>
-      <v-timeline
-        class="text-right"
-        >
-            <v-timeline-item v-for="(service, i) in services" :key="i">
-                <v-card class="elevation-2">
-                    <v-card-title class="text-subtitle-1 head">
-                        {{ service.heading }}
-                    </v-card-title>
-                    <v-card-text class="body">
-                        {{ service.description }}
-                    </v-card-text>
-                </v-card>
-            </v-timeline-item>
-        </v-timeline>
-    </div> -->
-
-    <v-card>
+    <v-card rounded="xl" color="primary" elevation="10">
       <v-timeline :dense="$vuetify.breakpoint.mdAndDown">
         <v-timeline-item
-          class="text-left ma-5"
           v-for="(service, i) in services"
           :key="i"
-          color="info"
-          :icon="service.number"
-          fill-dot
+          color="accent"
+          :class="i % 2 == 0 ? 'text-left' : 'text-right'"
+          large
         >
-          <h2 class="text-h6 mb-4">
-            {{ service.heading }}
-          </h2>
-          <h2 class="text-body-1 mb-4">
-            {{ service.description }}
-          </h2>
+          <template v-slot:icon>
+            <span class="text-h6 primary--text">{{ service.number }}</span>
+          </template>
+          <div class="pa-4">
+            <h2 class="text-h6 mb-4">
+              {{ service.heading }}
+            </h2>
+            <h2 class="text-body-1 mb-4">
+              {{ service.description }}
+            </h2>
+          </div>
         </v-timeline-item>
       </v-timeline>
     </v-card>
 
-    <v-container class="mt-10 mb-10">
-      <v-row no-gutters class="pa-8">
-        <h1 class="text-h4 mb-5 mt-10">WHO WE ARE AND WHAT WE DO</h1>
-        <h3 class="text-body-1">
+    <v-row no-gutters class="pa-8"> </v-row>
+
+    <v-row justify="center">
+      <!-- <h1 class="text-h4">FOUNDER'S VISION</h1> -->
+      <v-col cols="12" lg="4" align="center">
+        <h1 class="text-h5 mb-5 accent--text text-right">
+          WHO WE ARE AND WHAT WE DO
+        </h1>
+        <h2 class="text-body-1">
           SHINY CORALS PRESCHOOL is very methodical and new-age conceptual
           preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool
           concentrates on the overall development of children. With its very
@@ -71,54 +62,47 @@
           behaved which will win hearts of our children. Our staffs are always
           helpful via conferences and monthly meetings throughout the school
           year.
+        </h2>
+      </v-col>
+      <v-col col="12" lg="2" md="4" class="pa-8">
+        <v-img
+          contain
+          height="300"
+          :lazy-src="require('@/assets/img/Sampa.jpg')"
+          :src="require('@/assets/img/Sampa.jpg')"
+        ></v-img>
+
+        <h1 class="text-button accent--text">Sampa Bhowmick</h1>
+        <h2 class="text-subtitle-1">Founder, Shiny Corals</h2>
+      </v-col>
+
+      <v-col col="12" lg="6" md="8">
+        <h1 class="text-h4 mb-5 accent--text">FOUNDER'S VISION</h1>
+        <h3 class="text-body-1">
+          She is a Graduate in English from Calcutta University. She did
+          Computer Diploma and CIC from IGNOU. Later, she did two diplomas in
+          IELTS from British Council. She has a glittering 9 years experience in
+          different sectors. Out of these, 4 years she worked and learned the
+          ways of education system. Then she realized the possibilities of this
+          sector and its impact on children’s lives and our society.
+          <br />
+          <br />
+          She designed the Seven Winged Curriculum for the all round development
+          of children. According to her, “Early childhood education is a very
+          important aspect of a child’s life. Human brain is always receptive no
+          matter how it learns. After birth, a child starts to learn whatever is
+          going on around. As the brain of a child is like a blank paper and it
+          writes whatever is going around, it is important for every parent to
+          take care of what is scratching on that paper. Here comes the
+          importance of preschools. Now a days, preschools are designed to give
+          overall education to look after a child’s development. And keeping
+          that in mind we, at SHINY CORALS, set a curriculum that ensures a
+          child’s seven winged developments with help of audio-visual and
+          practical learning with care and tenderness. To make a great nation we
+          need to concentrate to make a great human being from early childhood.”
         </h3>
-      </v-row>
-    </v-container>
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" align="center"
-          ><h1 class="text-h4">FOUNDER'S VISION</h1></v-col
-        >
-        <v-col col="12" lg="3" class="pa-8" justify="center">
-          <div>
-            <v-img
-              contain
-              height="300"
-              :src="require('@/assets/img/Sampa.jpg')"
-            ></v-img>
-          </div>
-
-          <h1 class="text-h6">Sampa Bhowmick</h1>
-          <h1 class="text-h6">Founder, Shiny Corals</h1>
-        </v-col>
-
-        <v-col col="12" lg="8" class="pa-8" justify="center">
-          <h3 class="text-body-1">
-            She is a Graduate in English from Calcutta University. She did
-            Computer Diploma and CIC from IGNOU. Later, she did two diplomas in
-            IELTS from British Council. She has a glittering 9 years experience
-            in different sectors. Out of these, 4 years she worked and learned
-            the ways of education system. Then she realized the possibilities of
-            this sector and its impact on children’s lives and our society.
-            <br />
-            She designed the Seven Winged Curriculum for the all round
-            development of children. According to her, “Early childhood
-            education is a very important aspect of a child’s life. Human brain
-            is always receptive no matter how it learns. After birth, a child
-            starts to learn whatever is going on around. As the brain of a child
-            is like a blank paper and it writes whatever is going around, it is
-            important for every parent to take care of what is scratching on
-            that paper. Here comes the importance of preschools. Now a days,
-            preschools are designed to give overall education to look after a
-            child’s development. And keeping that in mind we, at SHINY CORALS,
-            set a curriculum that ensures a child’s seven winged developments
-            with help of audio-visual and practical learning with care and
-            tenderness. To make a great nation we need to concentrate to make a
-            great human being from early childhood.”
-          </h3>
-        </v-col>
-      </v-row>
-    </v-container>
+      </v-col>
+    </v-row>
 
     <!-- <v-container class="mt-10 mb-10">
       <v-row no-gutters>
@@ -219,45 +203,43 @@
         </v-row>
     </v-container> -->
 
-    <v-container>
-      <h1 class="text-h4 warning--text mt-12 text-center">
-        OUR UNIQUE APPROACH
-      </h1>
-      <v-divider></v-divider>
-      <v-row class="mt-11">
-        <v-col
-          v-for="(service1, i) in services1"
-          :key="i"
-          cols="12"
-          lg="4"
-          class="pa-8"
-        >
-          <v-img :src="service1.img" height="70" width="70"></v-img>
-          <h1 class="warning--text text-h5 head">
-            {{ service1.heading1 }}
-          </h1>
+    <h1 class="text-h4 accent--text mt-10 mb-4 text-center">
+      OUR UNIQUE APPROACH
+    </h1>
+    <v-divider></v-divider>
+    <v-row class="mt-10">
+      <v-col
+        v-for="(service1, i) in services1"
+        :key="i"
+        cols="12"
+        lg="4"
+        class="pa-8"
+      >
+        <v-img :src="service1.img" height="70" width="70"></v-img>
+        <h1 class="warning--text text-h5 my-4">
+          {{ service1.heading1 }}
+        </h1>
 
-          <h1 class="body">
-            <h3 class="text-subtitle-1">
-              {{ service1.description1 }}
-            </h3>
-          </h1>
+        <h1 class="body">
+          <h3 class="text-subtitle-1">
+            {{ service1.description1 }}
+          </h3>
+        </h1>
 
-          <v-row>
-            <v-col
-              v-for="(data, i) in service1.children"
-              :key="i"
-              cols="12"
-              lg="12"
-            >
-              <ul class="text-subtitle-1">
-                <li>{{ data.sub }}</li>
-              </ul>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
+        <v-row>
+          <v-col
+            v-for="(data, i) in service1.children"
+            :key="i"
+            cols="12"
+            lg="12"
+          >
+            <ul class="text-subtitle-1">
+              <li>{{ data.sub }}</li>
+            </ul>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
 
     <!-- <v-container class="pa-8 ma-12">
       <v-row>
@@ -312,34 +294,25 @@
         </v-col>
     </v-row>
   </v-container> -->
+    <div class="text-center mt-10" id="faq">
+      <h1 class="text-h4 mb-4">
+        <span class="warning--text"> F.A.Q </span>(FREQUENTLY ASKED QUESTIONS)
+      </h1>
+      <h2 class="text-subtitle-1">
+        CONTACT US DIRECTLY IF YOU DON'T FIND THE INFORMATION NEEDED BELOW.
+      </h2>
 
-    <v-container>
-      <v-row class="mt-15" justify="center">
-        <h1 class="text-h4 ma-5">
-          <span class="warning--text text-h3"> F.A.Q </span>(FREQUENTLY ASKED
-          QUESTIONS)
-        </h1>
-        <h1 class="text-h6 pa-3">
-          CONTACT US DIRECTLY IF YOU DON'T FIND THE INFORMATION NEEDED BELOW.
-        </h1>
-
-        <v-expansion-panels>
-          <v-expansion-panel
-            v-for="(query, i) in faq"
-            :key="i"
-            cols="12"
-            lg="12"
-          >
-            <v-expansion-panel-header class="head">
-              {{ query.question }}
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              {{ query.answer }}
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </v-row>
-    </v-container>
+      <v-expansion-panels inset>
+        <v-expansion-panel v-for="(query, i) in faq" :key="i">
+          <v-expansion-panel-header>
+            {{ query.question }}
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            {{ query.answer }}
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </div>
 
     <!-- <v-row>
         <v-col v-for="service in media" :key="service" cols="12" lg="4">

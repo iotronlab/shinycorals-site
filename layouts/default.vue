@@ -37,12 +37,14 @@
         >
       </v-row>
       <v-btn
-        color=" success"
+        color="lightgray"
         class="ml-auto font-weight-bold"
         rounded
         href="tel:+919903067468 "
         target="_blank"
-        ><v-icon left>{{ icons.call }}</v-icon> Call</v-btn
+        rel="noreferrer"
+        ><v-icon left>{{ icons.call }}</v-icon
+        >Call</v-btn
       >
     </v-app-bar>
     <v-main>
@@ -115,18 +117,6 @@ export default {
         { name: 'Google', url: 'https://www.google.com/', icon: mdiGoogle },
       ],
     }
-  },
-  mounted() {
-    let myNav = document.getElementById('nav')
-    window.onscroll = function () {
-      'use strict'
-      if (document.body.scrollTop >= 1000) {
-        myNav.classList.add('nav-transparent')
-      } else {
-        myNav.classList.remove('nav-transparent')
-      }
-    }
-    console.log(this.$icon)
   },
 }
 </script>

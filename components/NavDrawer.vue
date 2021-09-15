@@ -20,6 +20,7 @@
         :key="social.name"
         :href="social.url"
         target="_blank"
+        rel="noreferrer"
         :aria-label="social.name"
         ><v-icon v-html="social.icon"></v-icon></v-btn
     ></v-list-item>

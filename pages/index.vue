@@ -34,7 +34,7 @@
 
     <v-container class="mt-10 mb-8" id="ClassroomProgrammes">
       <h1 class="text-h4 text-center">Classroom Programmes</h1>
-      <p class="lightgray--text text-center">
+      <p class="text-center">
         Designed to develope a child's seven areas of learning.
       </p>
 
@@ -83,12 +83,3 @@ export default {
 }
 </script>
 
-
-<!--<style scoped>
-.upper-classroom {
-  border-top: 2px solid #f1f1f1;
-  margin-top: 7%;
-  margin-bottom: 7%;
-}
-</style>
--->

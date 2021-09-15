@@ -26,56 +26,42 @@
     </v-row>
 
     <v-dialog v-model="dialog">
-      <v-btn
-        color="white"
-        class="btn bg-model close"
-        dark
-        dense
-        text
-        @click="dialog = false"
-      >
-        <p>x</p>
+      <v-btn class="mx-2" fab small color="pink" @click="dialog = false">
+        <v-icon>{{ icons.cross }}</v-icon>
       </v-btn>
-      <!-- <v-card> -->
-      <!-- <v-card-title class="text-h5 grey lighten-2"> -->
 
-      <v-carousel
-        height="500"
-        hide-delimiter-background
-        show-arrows-on-hover
-        v-model="activeImage"
-      >
+      <v-carousel height="500" hide-delimiter-background v-model="activeImage">
+        <template v-slot:prev="{ on, attrs }">
+          <v-icon v-bind="attrs" v-on="on">{{ icons.left }}</v-icon>
+        </template>
+        <template v-slot:next="{ on, attrs }">
+          <v-icon v-bind="attrs" v-on="on">{{ icons.right }}</v-icon>
+        </template>
         <v-carousel-item v-for="(slide, i) in gallery" :key="i">
-          <!-- <v-sheet :color="colors[i]" height="100%"> -->
           <v-row align="center" justify="center">
             <v-img :src="slide.img" contain height="500" />
           </v-row>
-          <!-- </v-sheet> -->
         </v-carousel-item>
       </v-carousel>
-      <!-- </v-card-title> -->
-      <!-- </v-card> -->
-      <!-- <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="white" class="btn" dark dense text @click="dialog = false">
-                    I accept
-                </v-btn>
-                <v-btn color="white" class="btn" dark dense text v-on:click="close()">
-                    click me
-                </v-btn>
-            </v-card-actions> -->
     </v-dialog>
   </v-container>
 </template>
 
 <script>
+import { mdiClose, mdiChevronDoubleRight, mdiChevronDoubleLeft } from '@mdi/js'
+
 export default {
   data() {
     return {
       dialog: false,
+
+      icons: {
+        cross: mdiClose,
+        right: mdiChevronDoubleRight,
+        left: mdiChevronDoubleLeft,
+      },
+
       activeImage: null,
-      // src: require('@/assets/image/1.jpeg')
-      // img:    { src: require('@/assets/image/1.jpeg') } ,
       gallery: [
         {
           img: { src: require('@/assets/image/1.jpeg') },

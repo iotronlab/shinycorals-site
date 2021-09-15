@@ -646,20 +646,4 @@ export default {
 </script>
 
 
-<!--
-<style scoped>
-.achievementImage
-{
-  height:45%;
-  width: 55%;
 
-}
-
-.Achievementsheader
-{
-   text-align: center;
-   border-bottom: 2px solid #f1f1f1;
-   width: 100%;
-}
-</style>
--->

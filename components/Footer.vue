@@ -6,15 +6,14 @@
           :src="require('@/assets/img/shiny_logo.png')"
           :max-width="$vuetify.breakpoint.lgAndUp ? 120 : 100"
           class="mx-auto"
+          alt="shiny Logo"
         ></v-img>
       </nuxt-link>
+
       <v-row justify="center">
         <v-col col="12" lg="4" class="text-md-right grey--text">
           <h1 class="text-h6 mt-2">Shiny Corals Pre-School</h1>
-
-          <!-- <h1 class="text-h6">Shiny Corals PreSchool</h1> -->
           <p>West Bankim Pally, MADHYAMGRAM - 700129.</p>
-
           <v-btn
             text
             class="caption"
@@ -37,8 +36,9 @@
               v-for="social in socialLinks"
               :key="social.name"
               :href="social.url"
-              target="_blank"
               :aria-label="social.name"
+              target="_blank"
+              rel="noreferrer"
               ><v-icon v-html="social.icon"></v-icon
             ></v-btn>
           </v-row>

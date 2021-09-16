@@ -98,6 +98,16 @@ export default {
         {
           title: 'About US',
           to: '/about-us',
+          sublinks: [
+            {
+              title: 'FAQ',
+              to: '/about-us#faq',
+            },
+            {
+              title: 'FAQ',
+              to: '/about-us#faq',
+            },
+          ],
         },
         {
           title: 'CLASSROOM PROGRAMMES',

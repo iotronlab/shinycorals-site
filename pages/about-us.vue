@@ -302,7 +302,8 @@
   </v-container> -->
     <div class="text-center mt-10" id="faq">
       <h1 class="text-h4 mb-4">
-        <span class="warning--text"> F.A.Q </span>(FREQUENTLY ASKED QUESTIONS)
+        <span class="warning--text font-weight-bold"> F.A.Q </span>(FREQUENTLY
+        ASKED QUESTIONS)
       </h1>
       <h2 class="text-subtitle-1">
         CONTACT US DIRECTLY IF YOU DON'T FIND THE INFORMATION NEEDED BELOW.

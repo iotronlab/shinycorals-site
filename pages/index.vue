@@ -10,7 +10,7 @@
 
     <IndexAbout />
 
-    <v-row no-gutters align="center" justify="center" class="text-center">
+    <v-row no-gutters align="center" justify="center" class="text-center pa-4">
       <v-col cols="12" lg="7">
         <h1 class="warning--text text-h5">
           "Early childhood education is a very important aspect of a child’s
@@ -26,20 +26,20 @@
 
     <v-divider></v-divider>
 
-    <div class="pt-10 pb-8" id="ClassroomProgrammes">
+    <v-container id="ClassroomProgrammes">
       <h1 class="text-h4 text-center">Classroom Programmes</h1>
       <p class="text-center">
         Designed to develope a child's seven areas of learning.
       </p>
 
-      <v-card rounded="lg" color="primary">
+      <v-card rounded="lg" color="primary" elevation="10">
         <IndexProgramDetail />
       </v-card>
-    </div>
+    </v-container>
 
-    <div class="pb-10">
+    <section class="pa-5">
       <IndexReview />
-    </div>
+    </section>
   </v-container>
 </template>
 

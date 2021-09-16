@@ -1,40 +1,35 @@
 <template>
-  <v-container>
-    <v-row no-gutters>
-      <v-col v-for="(Program, i) in Programs" :key="i" cols="12" lg="4">
-        <v-timeline dense clipped>
-          <v-timeline-item fill-dot class="mb-4" color="info" large>
-            <template v-slot:icon>
-              <v-avatar>
-                <v-img :src="Program.img"></v-img>
-              </v-avatar>
-            </template>
+  <v-row no-gutters>
+    <v-col v-for="(Program, i) in Programs" :key="i" cols="12" lg="4">
+      <v-timeline dense clipped>
+        <v-timeline-item color="accent" large>
+          <template v-slot:icon>
+            <v-avatar>
+              <v-img :src="Program.img"></v-img>
+            </v-avatar>
+          </template>
+          <div class="pa-2">
+            <h1 class="text-h6 accent--text">{{ Program.header }}</h1>
 
-            <v-row justify="space-between">
-              <v-col cols="12">
-                <h2>{{ Program.header }}</h2>
-                <h3>{{ Program.subtitle }}</h3>
-                <p>{{ Program.subheader }}</p>
-              </v-col>
-            </v-row>
-          </v-timeline-item>
+            <h2 class="text-body-1">{{ Program.subtitle }}</h2>
+            <v-divider class="my-1"></v-divider>
+            <p class="text--secondary">{{ Program.subheader }}</p>
+          </div>
+        </v-timeline-item>
 
-          <v-row justify="space-between">
-            <v-col v-for="(data, i) in Program.sub" :key="i" cols="12">
-              <v-timeline-item
-                class="mb-4"
-                color="info"
-                icon-color="secondary"
-                small
-              >
-                {{ data.p }}
-              </v-timeline-item>
-            </v-col>
-          </v-row>
-        </v-timeline>
-      </v-col>
-    </v-row>
-  </v-container>
+        <v-timeline-item
+          color="accent"
+          small
+          v-for="(data, i) in Program.sub"
+          :key="i"
+        >
+          <div class="pa-2">
+            {{ data.p }}
+          </div>
+        </v-timeline-item>
+      </v-timeline>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

@@ -139,8 +139,6 @@ export default {
         myNav.classList.remove('nav-transparent')
       }
     }
-    // this.tawk()
-    console.log(this.$icon)
   },
 }
 </script>

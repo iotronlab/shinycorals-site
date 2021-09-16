@@ -129,6 +129,19 @@ export default {
       ],
     }
   },
+  mounted() {
+    let myNav = document.getElementById('nav')
+    window.onscroll = function () {
+      'use strict'
+      if (document.body.scrollTop >= 200) {
+        myNav.classList.add('nav-transparent')
+      } else {
+        myNav.classList.remove('nav-transparent')
+      }
+    }
+    // this.tawk()
+    console.log(this.$icon)
+  },
 }
 </script>
 <style scoped>

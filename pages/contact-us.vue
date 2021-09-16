@@ -3,6 +3,7 @@
     <h1 class="text-h4">Contact Us</h1>
     <v-divider class="my-2"></v-divider>
     <iframe
+      title="contact-form"
       src="https://docs.google.com/forms/d/e/1FAIpQLSf22rm2gcBW5yKk7m3H-6tjkyiupgbaGmXoZwCJdhCAs5Rq1A/viewform?embedded=true"
       width="100%"
       height="1700"

@@ -30,7 +30,7 @@
           >
             <v-img :src="Detail.img" height="80" width="80"></v-img>
             <h1 class="text-h5 my-2">{{ Detail.header }}</h1>
-            <h2 class="text--secondary text-subtitle-1">{{ Detail.id }}</h2>
+            <h2 v-html="Detail.id" class="text--secondary text-subtitle-1"></h2>
           </v-col>
         </v-row>
       </v-col>
@@ -46,22 +46,22 @@ export default {
       Details: [
         {
           header: 'Safe and Secure environment',
-          id: "At Shiny Corals PreSchool, we think of children's safety above all. We have CCTV installed in our premises and our teachers are trained to handle medical emergencies. We also have safety kits like fire extinguishers and first aids.",
+          id: "At Shiny Corals PreSchool, we think of children's safety above all. We have <b>CCTV</b> installed in our premises and our teachers are trained to handle medical emergencies. We also have safety kits like <b>fire extinguishers</b> and <b>first aids</b>.",
           img: require('@/assets/img/cctv.png'),
         },
         {
           header: 'Smart Digital Classrooms',
-          id: 'Our classrooms are fitted with digital interactive boards, which introduces the children to the world of computers and technology. As high schools have already adopted smart classrooms, we intend to give the kids an early advantage.',
+          id: 'Our classrooms are fitted with <b>digital interactive boards</b>, which introduces the children to the world of <b>computers</b> and <b>technology</b>. As high schools have already adopted smart classrooms, we intend to give the kids an early advantage.',
           img: require('@/assets/img/flipchart.png'),
         },
         {
           header: 'Concept of PlaySchool',
-          id: "Our Curriculum is expertly designed to develope a child's 7 areas of learning through yoga, craft, educational toys, field trips and a library.",
+          id: "Our Curriculum is expertly designed to develope a child's 7 areas of learning through <b>yoga</b>, <b>craft</b>, <b>educational toys</b>, <b>field trips</b> and a <b>library</b>.",
           img: require('@/assets/img/meeting.png'),
         },
         {
           header: 'Student-Parent-Teacher',
-          id: 'For the overall developement of children, our staffs are always helpful via conferences and monthly meetings throughout the school year.',
+          id: 'For the overall developement of children, our staffs are always helpful via <b>conferences</b> and <b>monthly meetings</b> throughout the school year.',
           img: require('@/assets/img/piano-keyboard.png'),
         },
       ],

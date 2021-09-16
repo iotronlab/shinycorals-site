@@ -8,7 +8,7 @@
       ></v-img>
     </v-sheet>
 
-    <About />
+    <IndexAbout />
 
     <v-row no-gutters align="center" justify="center" class="text-center">
       <v-col cols="12" lg="7">
@@ -26,20 +26,20 @@
 
     <v-divider></v-divider>
 
-    <v-container class="mt-10 mb-8" id="ClassroomProgrammes">
+    <div class="pt-10 pb-8" id="ClassroomProgrammes">
       <h1 class="text-h4 text-center">Classroom Programmes</h1>
       <p class="text-center">
         Designed to develope a child's seven areas of learning.
       </p>
 
       <v-card rounded="lg" color="primary">
-        <ProgramDetail />
+        <IndexProgramDetail />
       </v-card>
-    </v-container>
+    </div>
 
-    <v-container class="mb-10">
-      <Review />
-    </v-container>
+    <div class="pb-10">
+      <IndexReview />
+    </div>
   </v-container>
 </template>
 

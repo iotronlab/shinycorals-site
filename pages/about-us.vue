@@ -25,9 +25,7 @@
             <h2 class="text-h6 mb-4">
               {{ service.heading }}
             </h2>
-            <h2 class="text-body-1 mb-4">
-              {{ service.description }}
-            </h2>
+            <h2 v-html="service.description" class="text-body-1 mb-4"></h2>
           </div>
         </v-timeline-item>
       </v-timeline>
@@ -42,26 +40,34 @@
           WHO WE ARE AND WHAT WE DO
         </h1>
         <h2 class="text-body-1">
-          SHINY CORALS PRESCHOOL is very methodical and new-age conceptual
-          preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool
-          concentrates on the overall development of children. With its very
-          rich curriculum for children’s 7 winged developments, it introduces
-          digital smart classroom for every class. We strongly believe that
-          learning begins with the family; the school’s goal is to extend and
-          develope that process in a spirit of cooperation among students,
-          teachers, and parents. We also believe that a small student to teacher
-          ratio is of utmost importance to give students the attention they need
-          to reach their full potential. "We value trust, fairness, cooperation,
-          and sensitivity, and expect students to learn to reach outside
-          themselves and respect the dignity of others. Our students will not
-          only graduate from SHINY CORALS PRESCHOOL with strong academic skills
-          and a readiness for high school, they will also grow as individuals
-          and learn about the importance of social responsibility." Our Teachers
-          are well trained educators and having fair experience in education
-          sectors. Our teaching Assistants are well groomed and very well
-          behaved which will win hearts of our children. Our staffs are always
-          helpful via conferences and monthly meetings throughout the school
-          year.
+          SHINY CORALS PRESCHOOL is very
+          <strong> methodical and new-age conceptual</strong>
+          preschool of <strong>ESHANPUTRA LEARNWISE</strong>. Established in
+          2019, this preschool concentrates on the overall development of
+          children. With its very rich curriculum for
+          <strong>children’s 7 winged developments</strong>, it introduces
+          <strong>digital smart classroom</strong> for every class. We strongly
+          believe that learning begins with the family; the school’s goal is to
+          extend and develope that process in a
+          <strong
+            >spirit of cooperation among students, teachers, and parents</strong
+          >. We also believe that a
+          <strong>small student to teacher ratio</strong> is of utmost
+          importance to give students the attention they need to reach their
+          <strong>full potential</strong>. "We value trust, fairness,
+          cooperation, and sensitivity, and expect students to learn to reach
+          outside themselves and respect the dignity of others. Our students
+          will not only graduate from SHINY CORALS PRESCHOOL with strong
+          academic skills and a readiness for high school, they will also grow
+          as individuals and learn about the importance of social
+          responsibility." Our Teachers are
+          <strong>well trained educators</strong> and having fair experience in
+          education sectors. Our teaching Assistants are well groomed and very
+          well behaved which will win hearts of our children. Our staffs are
+          always helpful via
+          <strong
+            >conferences and monthly meetings throughout the school year</strong
+          >.
         </h2>
       </v-col>
       <v-col col="12" lg="2" md="4" class="pa-8">
@@ -343,17 +349,17 @@ export default {
       services: [
         {
           heading: 'COMMUNICATION AND LANGUAGE',
-          description: `Children are encouraged to extend their vocabulary and fluency by talking, listening and responding to stories, songs and rhymes in small and large groups.  Children learn the purpose of writing and how to draw and write symbols for themselves.  Children are encouraged to give their attention to what others say and respond appropriately.  Children are also encouraged to follow simple instructions and answer ‘how’ and ‘why’ questions at group discussions.`,
+          description: `Children are encouraged to extend their <b>vocabulary</b> and <b>fluency</b> by <b>talking, listening</b> and <b>responding</b> to <b>stories, songs</b> and <b>rhymes</b> in small and large groups.  Children learn the purpose of <b>writing</b> and how to <b>draw</b> and <b>write symbols</b> for themselves.  Children are encouraged to give their attention to what others say and respond appropriately.  Children are also encouraged to follow simple instructions and answer <b>‘how’ and ‘why’ questions</b> at group discussions.`,
           number: '1',
         },
         {
           heading: 'PHYSICAL DEVELOPMENT',
-          description: `Children learn how to stay healthy by everyday morning yoga which will develope their mental calmness, physical and mental balance. They also develop the fine motor skills they will need to use tools, including pens, pencils and scissors and to handle small objects safely and with increasing control. They understand about the importance of, and how to look after, their bodies when we discuss health and safe-care with them. At snack times, we discuss about good and healthy food.`,
+          description: `Children learn how to stay <b>healthy</b> by everyday morning <b>yoga</b> which will develope their <b>mental calmness, physical and mental balance</b>. They also develop the <b>fine motor skills</b> they will need to use <b>tools, including pens, pencils</b> and <b>scissors</b> and to handle <b>small objects safely</b> and with <b>increasing control</b>. They understand about the importance of, and how to look after, their bodies when we discuss <b>health</b> and <b>safe-care</b> with them. At snack times, we discuss about <b>good and healthy food</b>.`,
           number: '2',
         },
         {
           heading: 'PERSONAL, EMOTIONAL AND SOCIAL DEVELOPMENT',
-          description: `Children are individually supported in developing confidence, autonomy and self respect. They are encouraged to work and concentrate independently and also to take part in the life of the Pre-School, sharing and cooperating with other children and adults. They learn to express their feelings for others, make choices and respect each other. All children are given the opportunity to take responsibility for themselves, for other people and for the building and equipment. The children are encouraged to play co-operatively and show sensitivity to others around them when playing with toys.`,
+          description: `Children are individually supported in developing <b>confidence, autonomy and self respect</b>. They are encouraged to work and concentrate independently and also to take part in the life of the Pre-School, sharing and cooperating with other children and adults. They learn to <b>express their feelings</b> for others, <b>make choices</b> and <b>respect each other</b>. All children are given the opportunity to take <b>responsibility</b> for themselves, for other people and for the building and equipment. The children are encouraged to <b>play co-operatively</b> and <b>show sensitivity</b> to others around them when <b>playing with toys</b>.`,
           number: '3',
         },
         {
@@ -363,20 +369,20 @@ export default {
         },
         {
           heading: 'MATHEMATICS',
-          description: `Children become familiar with counting, understanding and using numbers, to describe shapes, spaces and measure. We use songs, games, digital board and picture books to help children to become aware of number sequences and simple mathematical operations. We also use educational toys such as shape sorters to help with their understanding.`,
+          description: `Children become familiar with <b>counting, understanding and using numbers, to describe shapes, spaces and measure</b>. We use <b>songs, games, digital board and picture books</b> to help children to become aware of <b>number sequences and simple mathematical operations</b>. We also use <b>educational toys</b> such as shape sorters to help with their understanding.`,
           number: '5',
         },
         {
           heading: 'UNDERSTANDING THE WORLD',
-          description: `Children learn to observe the features of objects, substances and living things, recognising differences, patterns and similarities, then share and record what they find. Children explore past and present events in their own lives and in the lives of their families and other people they know. They begin to gain an awareness of the cultures and beliefs of others.
-                    Children learn about the world in which they live, their community and environment by assisting with seasonal planting and visiting local areas. This aids their understanding of caring for their local environment.
-                    They learn how to use the right tool for the task.  They can also learn how to use computers through various games we have, aided by a child-friendly mouse to navigate around the page.
-                    Children also will celebrate different important days of the year to become an Indian as well as a World Citizen.`,
+          description: `Children learn to observe the <b>features of objects, substances and living things, recognising differences, patterns and similarities</b>, then share and record what they find. Children <b>explore past and present events</b> in their own lives and in the lives of their families and other people they know. They begin to gain an awareness of the <b>cultures and beliefs</b> of others.
+                    Children learn about the world in which they live, their community and environment by assisting with <b>seasonal planting and visiting local areas</b>. This aids their understanding of caring for their local environment.
+                    They learn how to use the right tool for the task.  They can also learn how to <b>use computers through various games</b> we have, aided by a <b>child-friendly mouse</b> to navigate around the page.
+                    Children also will celebrate different <b>important days of the year</b> to become an <b>Indian as well as a World Citizen</b>.`,
           number: '6',
         },
         {
           heading: 'EXPRESSIVE ARTS AND DESIGN',
-          description: `Children are encouraged to use creativity to express their ideas and feelings. Paint, glue, crayons and pencils as well as natural and recycled resources help them to explore colour, shape and texture.  Children act out stories, sing, dance, and play musical instruments and there are many opportunities for imaginative role-play. We will use different stories to teach role play to the children.`,
+          description: `Children are encouraged to use <b>creativity</b> to express their ideas and feelings. <b>Paint, glue, crayons and pencils</b> as well as natural and recycled resources help them to <b>explore colour, shape and texture</b>.  Children act out <b>stories, sing, dance, and play musical instruments</b> and there are many opportunities for <b>imaginative role-play</b>. We will use different stories to teach role play to the children.`,
           number: '7',
         },
       ],

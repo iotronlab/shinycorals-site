@@ -7,15 +7,20 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - shinycorals',
-    title: 'shinycorals',
+    titleTemplate: '%s - PreSchool',
+    title: 'Shiny Corals',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'SHINY CORALS PRESCHOOL is very methodical and new-age conceptual preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool concentrates on the overall development of children. With its very rich curriculum for children’s 7 winged developments, it introduces digital smart classroom for every class. We strongly believe that learning begins with the family; the school’s goal is to extend and develope that process in a spirit of cooperation among students, teachers, and parents. We also believe that a small student to teacher ratio is of utmost importance to give students the attention they need to reach their full potential. "We value trust, fairness, cooperation, and sensitivity, and expect students to learn to reach outside themselves and respect the dignity of others. Our students will not only graduate from SHINY CORALS PRESCHOOL with strong academic skills and a readiness for high school, they will also grow as individuals and learn about the importance of social responsibility." Our Teachers are well trained educators and having fair experience in education sectors. Our teaching Assistants are well groomed and very well behaved which will win hearts of our children. Our staffs are always helpful via conferences and monthly meetings throughout the school year.' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'SHINY CORALS PRESCHOOL is very methodical and new-age conceptual preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool concentrates on the overall development of children. With its very rich curriculum for children’s 7 winged developments, it introduces digital smart classroom for every class. We strongly believe that learning begins with the family; the school’s goal is to extend and develope that process in a spirit of cooperation among students, teachers, and parents. We also believe that a small student to teacher ratio is of utmost importance to give students the attention they need to reach their full potential. "We value trust, fairness, cooperation, and sensitivity, and expect students to learn to reach outside themselves and respect the dignity of others. Our students will not only graduate from SHINY CORALS PRESCHOOL with strong academic skills and a readiness for high school, they will also grow as individuals and learn about the importance of social responsibility." Our Teachers are well trained educators and having fair experience in education sectors. Our teaching Assistants are well groomed and very well behaved which will win hearts of our children. Our staffs are always helpful via conferences and monthly meetings throughout the school year.',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/icon.png' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -40,13 +45,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
 
@@ -70,7 +72,7 @@ export default {
         light: {
           primary: '#FDF2F8',
           accent: '#5B21B6',
-          success: '#22C55E',
+          success: '#059669',
           info: '#EF4444',
           warning: '#DC2626',
           gray: '#27272A',
@@ -98,10 +100,10 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
-    // icon: {
-    //   /* icon options */
-    //   source: '/shiny_logo.png',
-    // },
+    icon: {
+      /* icon options */
+      source: '/icon.png',
+    },
     manifest: {
       lang: 'en',
       name: 'shinycorals',
@@ -114,7 +116,7 @@ export default {
       name: 'Shiny Logo',
       author: 'iotron',
       description: `SHINY CORALS PRESCHOOL is very methodical and new-age conceptual preschool of ESHANPUTRA LEARNWISE. Established in 2019, this preschool concentrates on the overall development of children. With its very rich curriculum for children’s 7 winged developments, it introduces digital smart classroom for every class. We strongly believe that learning begins with the family; the school’s goal is to extend and develope that process in a spirit of cooperation among students, teachers, and parents. We also believe that a small student to teacher ratio is of utmost importance to give students the attention they need to reach their full potential. "We value trust, fairness, cooperation, and sensitivity, and expect students to learn to reach outside themselves and respect the dignity of others. Our students will not only graduate from SHINY CORALS PRESCHOOL with strong academic skills and a readiness for high school, they will also grow as individuals and learn about the importance of social responsibility." Our Teachers are well trained educators and having fair experience in education sectors. Our teaching Assistants are well groomed and very well behaved which will win hearts of our children. Our staffs are always helpful via conferences and monthly meetings throughout the school year.`,
-      ogHost: '',
+      ogHost: 'https://www.shinycorals.in',
     },
   },
 

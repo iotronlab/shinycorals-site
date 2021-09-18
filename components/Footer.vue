@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="primary" class="grey--text">
+  <v-footer color="primary" class="footer-image">
     <v-container fluid>
       <nuxt-link :to="{ name: 'index' }">
         <v-img
@@ -87,3 +87,9 @@ export default {
   },
 }
 </script>
+<style>
+.footer-image {
+  background-image: url('@/assets/image/bg/footer.svg');
+  background-size: cover;
+}
+</style>

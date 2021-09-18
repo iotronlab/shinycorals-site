@@ -110,105 +110,6 @@
       </v-col>
     </v-row>
 
-    <!-- <v-container class="mt-10 mb-10">
-      <v-row no-gutters>
-        <v-col col="12" lg="4" class="pa-8">
-          <h1 class="text-h5">WHO WE ARE AND WHAT WE DO</h1>
-          <h3 class="text-body-1">
-            SHINY CORALS PRESCHOOL is very methodical and new-age conceptual
-            preschool of ESHANPUTRA LEARNWISE. Established in 2019, this
-            preschool concentrates on the overall development of children. With
-            its very rich curriculum for children’s 7 winged developments, it
-            introduces digital smart classroom for every class. We strongly
-            believe that learning begins with the family; the school’s goal is
-            to extend and develope that process in a spirit of cooperation among
-            students, teachers, and parents. We also believe that a small
-            student to teacher ratio is of utmost importance to give students
-            the attention they need to reach their full potential. "We value
-            trust, fairness, cooperation, and sensitivity, and expect students
-            to learn to reach outside themselves and respect the dignity of
-            others. Our students will not only graduate from SHINY CORALS
-            PRESCHOOL with strong academic skills and a readiness for high
-            school, they will also grow as individuals and learn about the
-            importance of social responsibility." Our Teachers are well trained
-            educators and having fair experience in education sectors. Our
-            teaching Assistants are well groomed and very well behaved which
-            will win hearts of our children. Our staffs are always helpful via
-            conferences and monthly meetings throughout the school year.
-          </h3>
-        </v-col>
-        <v-col col="12" lg="4" class="pa-8">
-          <h1 class="text-h5">FOUNDER'S VISION</h1>
-          <div class="justify-space-around">
-            <v-img
-              class="mt-8 mb-9"
-              contain
-              height="300"
-              :src="require('@/assets/img/Sampa.jpg')"
-            ></v-img>
-          </div>
-          <h3 class="text-body-1">
-            <h1 class="text-h6">Sampa Bhowmick</h1>
-            <h1 class="text-h6">Founder, Shiny Corals</h1>
-
-            She is a Graduate in English from Calcutta University. She did
-            Computer Diploma and CIC from IGNOU. Later, she did two diplomas in
-            IELTS from British Council. She has a glittering 9 years experience
-            in different sectors. Out of these, 4 years she worked and learned
-            the ways of education system. Then she realized the possibilities of
-            this sector and its impact on children’s lives and our society.
-          </h3>
-        </v-col>
-        <v-col col="12" lg="4" class="pa-8">
-          <h3 class="text-body-1">
-            She designed the Seven Winged Curriculum for the all round
-            development of children. According to her, “Early childhood
-            education is a very important aspect of a child’s life. Human brain
-            is always receptive no matter how it learns. After birth, a child
-            starts to learn whatever is going on around. As the brain of a child
-            is like a blank paper and it writes whatever is going around, it is
-            important for every parent to take care of what is scratching on
-            that paper. Here comes the importance of preschools. Now a days,
-            preschools are designed to give overall education to look after a
-            child’s development. And keeping that in mind we, at SHINY CORALS,
-            set a curriculum that ensures a child’s seven winged developments
-            with help of audio-visual and practical learning with care and
-            tenderness. To make a great nation we need to concentrate to make a
-            great human being from early childhood.”
-          </h3>
-        </v-col>
-      </v-row>
-    </v-container> -->
-
-    <!-- <v-container >
-        <v-row>
-            <v-col v-for="(service,i) in services1" :key="i" cols="12" sm="4">
-                <v-timeline dense clipped>
-                    <v-timeline-item fill-dot class="mb-4" color="red" large>
-                        <template v-slot:icon>
-                            <span>Image</span>
-                        </template>
-
-                        <v-row justify="space-between">
-                            <v-col cols="12">
-                                <h2>{{ service.heading }}</h2>
-                                <p>{{ service.description }}</p>
-                            </v-col>
-                        </v-row>
-                    </v-timeline-item>
-                    <v-row justify="space-between">
-                        <v-col v-for="data in service.children" :key="data" cols="12">
-                                <v-timeline-item class="mb-4" color="red" icon-color="grey lighten-2" small>
-                                    {{ data.sub }}
-                                </v-timeline-item>
-
-                        </v-col>
-                    </v-row>
-                </v-timeline>
-            </v-col>
-        </v-row>
-    </v-container> -->
-
     <h1 class="text-h4 accent--text mt-10 mb-4 text-center">
       OUR UNIQUE APPROACH
     </h1>
@@ -247,59 +148,6 @@
       </v-col>
     </v-row>
 
-    <!-- <v-container class="pa-8 ma-12">
-      <v-row>
-        <v-col cols="12" lg="4">
-          <v-card>
-            <v-card-title class="head"> Our Gallery </v-card-title>
-            <v-card-subtitle class="body">
-              <h3>
-                These are the pictures from our school and field trips.Don't
-                forget to check our entire gallery!
-              </h3>
-              <v-btn class="btn">View All </v-btn>
-            </v-card-subtitle>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container> -->
-
-    <!-- <v-container class="ma-6">
-    <v-row>
-        <v-col>
-            <v-row justify="center">
-                <h1 class="Achievementsheader text-h4 mt-15 mb-10">Our <span class="text-h2 red--text">Achievements</span></h1>
-            </v-row>
-            <v-row justify="center">
-                <v-col v-for="(achievement,i) in achievements" :key="i" cols="12" lg="3" class="imgcol" justify="center">
-                           <v-img class="achievementImage mt-15 ml-7"
-                                :src="achievement.img"
-                             ></v-img>
-
-                    <h1 class="ml-15 mt-5">{{ achievement.number }}</h1>
-                    <h3 class="archi mr-4 mt-5">{{ achievement.title }}</h3>
-                </v-col>
-            </v-row>
-        </v-col>
-    </v-row>
-  </v-container> -->
-
-    <!-- <v-container>
-    <v-row>
-        <v-col>
-            <v-row>
-                <h1 class="mx-5">Our Achievements</h1>
-            </v-row>
-            <v-row v-for="service in achievements" :key="service">
-                <v-col v-for="service1 in service.img" :key="service1" cols="11" lg="3" class="imgcol">
-                    <v-img :src="service1.src" class="ma-2 image" />
-                    <h1>{{ service.number }}</h1>
-                    <h3 class="archi">{{ service.title }}</h3>
-                </v-col>
-            </v-row>
-        </v-col>
-    </v-row>
-  </v-container> -->
     <div class="text-center mt-10" id="faq">
       <h1 class="text-h4 mb-4">
         <span class="warning--text font-weight-bold"> F.A.Q </span>(FREQUENTLY
@@ -320,25 +168,6 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </div>
-
-    <!-- <v-row>
-        <v-col v-for="service in media" :key="service" cols="12" lg="4">
-            <v-img :src="service.src" contain class="ma-2" />
-            <h3>{{ service.title }}</h3>
-        </v-col>
-    </v-row> -->
-    <!-- <v-row>
-        <v-col v-for="service in footer" :key="service" cols="11" lg="4">
-            <v-card>
-                <v-card-title class="head">
-                    {{ service.heading }}
-                </v-card-title>
-                <v-card-sub-title class="body">
-                    {{ service.description }}
-                </v-card-sub-title>
-            </v-card>
-        </v-col>
-    </v-row> -->
   </v-container>
 </template>
 

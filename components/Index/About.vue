@@ -8,9 +8,11 @@
       One of the very best for your child, nurturing curiosity with technology!
     </h2>
     <v-row no-gutters justify="center">
-      <v-col cols="12" lg="3">
-        <h1 class="text-h4">Why<br />Choose<br />US?</h1>
-        <p>
+      <v-col cols="12" lg="3" md="6">
+        <h1 class="text-h4 mb-4 text-center text-lg-left">
+          Why<br />Choose<br />US?
+        </h1>
+        <p class="text--secondary">
           <span><strong>Education through play. </strong></span>Think of us as a
           playschool with a well structured curriculum full of activities that
           teaches children in a innovative and enjoyable manner. Our goal is to
@@ -26,6 +28,8 @@
             :key="i"
             cols="12"
             lg="6"
+            md="6"
+            sm="6"
             class="pa-2"
           >
             <v-img :src="Detail.img" height="80" width="80"></v-img>

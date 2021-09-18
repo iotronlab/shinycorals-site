@@ -2,44 +2,33 @@
   <v-container fluid class="pa-0">
     <v-sheet style="margin-top: -7rem" width="100%" color="transparent">
       <v-img
-        :lazy-src="require('@/assets/img/loader.jpg')"
-        :src="require('@/assets/img/loader.jpg')"
+        :lazy-src="require('@/assets/image/bg/landing.webp')"
+        :src="require('@/assets/image/bg/landing.webp')"
         max-height="800"
+        eager
       ></v-img>
     </v-sheet>
 
-    <IndexAbout />
+    <LazyIndexAbout />
+    <LazyIndexQuote />
+    <v-divider class="my-4"></v-divider>
+    <h1 class="text-h3 text-center accent--text" id="ClassroomProgrammes">
+      Classroom Programmes
+    </h1>
+    <h2 class="text-center mb-8 font-weight-light">
+      Designed to develope a child's seven areas of learning.
+    </h2>
 
-    <v-row no-gutters align="center" justify="center" class="text-center pa-4">
-      <v-col cols="12" lg="7">
-        <h1 class="warning--text text-h5">
-          "Early childhood education is a very important aspect of a child’s
-          life. Human brain is always receptive
-          <span><strong>no matter how it learns</strong></span> ."
-        </h1>
-        <p>Sampa Bhowmick - Founder.</p>
-      </v-col>
-      <v-col cols="12" lg="3">
-        <v-btn color="accent">Find Out More</v-btn>
-      </v-col>
-    </v-row>
-
-    <v-divider></v-divider>
-
-    <v-container id="ClassroomProgrammes">
-      <h1 class="text-h4 text-center">Classroom Programmes</h1>
-      <p class="text-center">
-        Designed to develope a child's seven areas of learning.
-      </p>
-
-      <v-card rounded="lg" color="primary" elevation="10">
-        <IndexProgramDetail />
-      </v-card>
+    <v-container class="ma-0 bg-image" fluid>
+      <v-row no-gutters>
+        <v-col cols="12" lg="10" class="mx-auto">
+          <LazyIndexProgramDetail
+        /></v-col>
+      </v-row>
     </v-container>
-
-    <section class="pa-5">
-      <IndexReview />
-    </section>
+    <v-row no-gutters class="mb-4">
+      <v-col cols="12" lg="10" class="mx-auto"> <LazyIndexReview /></v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -76,4 +65,15 @@ export default {
   },
 }
 </script>
-
+<style scoped>
+.bg-image {
+  background-image: url('@/assets/image/bg/class-bg.jpg');
+  background-size: cover;
+}
+.card-overlap {
+  border-radius: 1rem !important;
+  background-color: rgba(253, 242, 248, 0.8) !important;
+  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+}
+</style>

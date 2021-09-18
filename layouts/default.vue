@@ -14,7 +14,7 @@
         <v-img
           v-if="$vuetify.breakpoint.mdAndDown"
           :src="require('@/assets/img/shiny_logo.png')"
-          width="50"
+          width="55"
         ></v-img>
       </nuxt-link>
       <v-row

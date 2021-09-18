@@ -1,18 +1,18 @@
 <template>
-  <v-container>
-    <v-row class="mt-5">
+  <v-container class="mt-5">
+    <v-row>
       <v-col cols="12" lg="4">
-        <v-avatar class="ma-4">
+        <v-avatar class="ma-4" size="64">
           <v-img
             :lazy-src="require('@/assets/img/review1.jpeg')"
             :src="require('@/assets/img/review1.jpeg')"
           ></v-img>
         </v-avatar>
 
-        <h1 class="text-subtitle-2">MRS. SHILPI GOSWAMI SAHA</h1>
-        <h2 class="text-subtitle-1">M/o, Ashmita Saha</h2>
+        <h1 class="text-button">MRS. SHILPI GOSWAMI SAHA</h1>
+        <h2 class="text-overline mb-2">M/o, Ashmita Saha</h2>
 
-        <v-card elevation="4">
+        <v-card elevation="4" rounded="xl">
           <v-card-text
             >Thank you for caring for my child each and every day. I’ll never
             forget the difference you've have made in her life. I feel extremely

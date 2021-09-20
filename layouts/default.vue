@@ -57,6 +57,18 @@
     <v-main>
       <nuxt />
     </v-main>
+    <v-btn
+      fab
+      fixed
+      bottom
+      right
+      color="accent"
+      href="https://wa.me/919903067468"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <v-icon x-large>{{ icons.whatsapp }} </v-icon>
+    </v-btn>
     <!--
    <section class="mt-5">
       <Social/>
@@ -131,7 +143,7 @@ export default {
         },
         {
           name: 'Whatsapp',
-          url: 'https://www.Whatsapp.com/',
+          url: 'https://wa.me/919903067468',
           icon: mdiWhatsapp,
         },
 
@@ -149,6 +161,9 @@ export default {
         myNav.classList.remove('nav-transparent')
       }
     }
+  },
+  myFunction(elmnt, link) {
+    elmnt.windows.href = link
   },
 }
 </script>

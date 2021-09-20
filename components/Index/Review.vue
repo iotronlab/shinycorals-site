@@ -23,7 +23,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" lg="4">
-        <v-card elevation="4">
+        <v-card elevation="4" rounded="xl">
           <v-card-text
             >Thank you for caring for my child each and every day. I’ll never
             forget the difference you've have made in her life. I feel extremely
@@ -33,30 +33,28 @@
           >
         </v-card>
 
-        <v-avatar>
+        <v-avatar class="ma-4" size="64">
           <v-img
-            class="ma-4"
             :lazy-src="require('@/assets/img/review2.jpeg')"
             :src="require('@/assets/img/review2.jpeg')"
           ></v-img>
         </v-avatar>
 
-        <span>MRS. SHILPI GOSWAMI SAHA</span><br />
-        <span class="ml-15">M/o, Ashmita Saha</span>
+        <h1 class="text-button">MS. AMRITA BANERJEE</h1>
+        <h2 class="text-overline mb-2">M/o, Gunjavni Banerjee</h2>
       </v-col>
       <v-col cols="12" lg="4">
-        <v-avatar>
+        <v-avatar class="ma-4" size="64">
           <v-img
             :lazy-src="require('@/assets/img/review3.jpeg')"
             :src="require('@/assets/img/review3.jpeg')"
           ></v-img>
         </v-avatar>
 
-        <span>MRS. SHILPI GOSWAMI SAHA</span><br /><span class="ml-15"
-          >M/o, Ashmita Saha</span
-        >
+        <h1 class="text-button">MRS. SUCHARITA GOSWAMI</h1>
+        <h2 class="text-overline mb-2">M/o, Shraman Goswami</h2>
 
-        <v-card elevation="4">
+        <v-card elevation="4" rounded="xl">
           <v-card-text
             >Thank you for caring for my child each and every day. I’ll never
             forget the difference you've have made in her life. I feel extremely

@@ -12,12 +12,12 @@
     <LazyIndexAbout />
     <LazyIndexQuote />
     <v-divider class="my-4"></v-divider>
-    <h1 class="text-h3 text-center accent--text" id="ClassroomProgrammes">
+    <!-- <h1 class="text-h3 text-center accent--text" id="ClassroomProgrammes">
       Classroom Programmes
     </h1>
     <h2 class="text-center mb-8 font-weight-light">
       Designed to develope a child's seven areas of learning.
-    </h2>
+    </h2> -->
 
     <v-container class="ma-0 bg-image" fluid>
       <v-row no-gutters>

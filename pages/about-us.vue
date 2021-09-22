@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-col class="mb-10" justify="center" align="center">
+    <v-col class="right mb-10" justify="center" align="center">
       <h1 class="text-h4">
         <span class="warning--text text-h3">Seven Core</span> Areas of Learning
       </h1>
@@ -9,7 +9,7 @@
         Based on the<span><strong> Core Concept of PlaySchool</strong></span>
       </h2>
     </v-col>
-    <v-card rounded="xl" color="primary" elevation="10">
+    <v-card class="left" rounded="xl" color="primary" elevation="10">
       <v-timeline :dense="$vuetify.breakpoint.mdAndDown">
         <v-timeline-item
           v-for="(service, i) in services"
@@ -35,7 +35,7 @@
 
     <v-row justify="center">
       <!-- <h1 class="text-h4">FOUNDER'S VISION</h1> -->
-      <v-col cols="12" lg="4" align="center">
+      <v-col class="left" cols="12" lg="4" align="center">
         <h1 class="text-h5 mb-5 accent--text text-right">
           WHO WE ARE AND WHAT WE DO
         </h1>
@@ -70,7 +70,7 @@
           >.
         </h2>
       </v-col>
-      <v-col col="12" lg="2" md="4" class="pa-8">
+      <v-col col="12" lg="2" md="4" class="right pa-8">
         <v-img
           contain
           height="300"
@@ -82,7 +82,7 @@
         <h2 class="text-subtitle-1">Founder, Shiny Corals</h2>
       </v-col>
 
-      <v-col col="12" lg="6" md="8">
+      <v-col class="right" col="12" lg="6" md="8">
         <h1 class="text-h4 mb-5 accent--text">FOUNDER'S VISION</h1>
         <h3 class="text-body-1">
           She is a Graduate in English from Calcutta University. She did
@@ -120,7 +120,7 @@
         :key="i"
         cols="12"
         lg="4"
-        class="pa-8"
+        class="left pa-8"
       >
         <v-img :src="service1.img" height="70" width="70"></v-img>
         <h1 class="warning--text text-h5 my-4">
@@ -148,7 +148,7 @@
       </v-col>
     </v-row>
 
-    <div class="text-center mt-10" id="faq">
+    <div class="right text-center mt-10" id="faq">
       <h1 class="text-h4 mb-4">
         <span class="warning--text font-weight-bold"> F.A.Q </span>(FREQUENTLY
         ASKED QUESTIONS)
@@ -450,6 +450,49 @@ export default {
       // },
       //  ],
     }
+  },
+  mounted() {
+    this.animateOnScroll()
+  },
+
+  methods: {
+    animateOnScroll() {
+      const gsap = this.$gsap
+      gsap.utils.toArray('.right').forEach((demo) => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: demo,
+            toggleActions: 'restart none none reverse',
+            // markers: true,
+            start: '-150px center',
+          },
+        })
+
+        tl.from(demo, {
+          y: 150,
+          ease: 'Power2.easeInOut',
+          duration: 1,
+          opacity: 0,
+        })
+      })
+      gsap.utils.toArray('.left').forEach((demo) => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: demo,
+            toggleActions: 'restart none none reverse',
+            // markers: true,
+            start: '-150px center',
+          },
+        })
+
+        tl.from(demo, {
+          x: -150,
+          ease: 'Power2.easeInOut',
+          duration: 1,
+          opacity: 0,
+        })
+      })
+    },
   },
 }
 </script>

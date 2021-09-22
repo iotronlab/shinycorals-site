@@ -40,6 +40,7 @@ export default {
     '@nuxtjs/vuetify',
     '@nuxtjs/pwa',
     '@nuxtjs/google-fonts',
+    'nuxt-gsap-module',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -96,6 +97,54 @@ export default {
       },
     },
     display: 'swap',
+  },
+
+gsap: {
+    /* module options */
+    extraPlugins: {
+      cssRule: true,
+      // draggable: true,
+      // easel: true,
+      // motionPath: true,
+      // pixi: true,
+      // text: true,
+      // scrollTo: true,
+      scrollTrigger: true,
+    },
+    extraEases: {
+      // expoScaleEase: true,
+      // roughEase: true,
+      // slowMo: true,
+    },
+  },
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    css: false,
+
+    beforeEnter(el) {
+      this.$gsap.set(el, {
+        opacity: 0,
+      })
+    },
+
+    enter(el, done) {
+      this.$gsap.to(el, {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done,
+      })
+    },
+
+    leave(el, done) {
+      this.$gsap.to(el, {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done,
+      })
+    },
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

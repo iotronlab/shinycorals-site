@@ -9,7 +9,9 @@
       ></v-img>
     </v-sheet>
 
-    <LazyIndexAbout />
+    <div class="left">
+      <LazyIndexAbout />
+    </div>
     <LazyIndexQuote />
     <v-divider class="my-4"></v-divider>
     <!-- <h1 class="text-h3 text-center accent--text" id="ClassroomProgrammes">
@@ -21,13 +23,13 @@
 
     <v-container class="ma-0 bg-image" fluid>
       <v-row no-gutters>
-        <v-col cols="12" lg="10" class="mx-auto">
+        <v-col cols="12" lg="10" class="right mx-auto">
           <LazyIndexProgramDetail
         /></v-col>
       </v-row>
     </v-container>
     <v-row no-gutters class="mb-4">
-      <v-col cols="12" lg="10" class="mx-auto"> <LazyIndexReview /></v-col>
+      <v-col cols="12" lg="10" class="left mx-auto"> <LazyIndexReview /></v-col>
     </v-row>
   </v-container>
 </template>
@@ -38,6 +40,7 @@ export default {
     return {}
   },
   mounted() {
+    this.animateOnScroll()
     if (this.$route.hash) {
       window.onNuxtReady(() => {
         let hash = this.$route.hash
@@ -60,6 +63,43 @@ export default {
             }
           }, 500)
         }
+      })
+    },
+    animateOnScroll() {
+      const gsap = this.$gsap
+      gsap.utils.toArray('.right').forEach((demo) => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: demo,
+            toggleActions: 'restart none none reverse',
+            // markers: true,
+            start: '-150px center',
+          },
+        })
+
+        tl.from(demo, {
+          y: 150,
+          ease: 'Power2.easeInOut',
+          duration: 1,
+          opacity: 0,
+        })
+      })
+      gsap.utils.toArray('.left').forEach((demo) => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: demo,
+            toggleActions: 'restart none none reverse',
+            // markers: true,
+            start: '-150px center',
+          },
+        })
+
+        tl.from(demo, {
+          x: -150,
+          ease: 'Power2.easeInOut',
+          duration: 1,
+          opacity: 0,
+        })
       })
     },
   },

@@ -17,7 +17,7 @@
     "core-js": "^3.18.0",
     "minify-css-string": "^1.0.0",
     "nuxt": "^2.15.7",
-    "vuetify": "^2.5.5"
+    "vuetify": "^2.5.9"
   },
   "devDependencies": {
     "@mdi/js": "^5.9.55",

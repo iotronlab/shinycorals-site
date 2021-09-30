@@ -3,10 +3,10 @@
     <v-container fluid>
       <nuxt-link :to="{ name: 'index' }">
         <v-img
-          :src="require('@/assets/img/shiny_logo.png')"
+          src="/icon.png"
           :max-width="$vuetify.breakpoint.lgAndUp ? 120 : 100"
           class="mx-auto"
-          alt="shiny Logo"
+          alt="shiny Coral Logo"
         ></v-img>
       </nuxt-link>
 

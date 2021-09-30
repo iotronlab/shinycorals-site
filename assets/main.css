@@ -1,0 +1,7 @@
+.card-overlap {
+  transition: all 0.2s ease-in-out;
+  border-radius: 1rem !important;
+  background-color: rgba(253, 242, 248, 0.8) !important;
+  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+}

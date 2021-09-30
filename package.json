@@ -4,21 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build --modern",
     "start": "nuxt start",
     "generate": "nuxt generate --modern",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "npm run lint:style"
   },
   "dependencies": {
-    "@mdi/js": "^5.9.55",
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.17.3",
+    "core-js": "^3.18.0",
     "minify-css-string": "^1.0.0",
     "nuxt": "^2.15.7",
-    "vue-gtag": "^1.16.1",
     "vuetify": "^2.5.5"
   },
   "devDependencies": {
@@ -27,7 +25,6 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/vuetify": "^1.12.1",
-    "eslint-config-prettier": "^8.3.0",
     "nuxt-gsap-module": "^1.4.0",
     "prettier": "^2.4.1",
     "stylelint": "^13.13.1",

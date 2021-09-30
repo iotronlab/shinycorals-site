@@ -1,18 +1,5 @@
 <template>
   <v-container>
-    <!-- <v-sheet class="mt-n16" color="transparent">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="landing-video"
-        :poster="require('@/assets/image/download.png')"
-      >
-        <source src="@/assets/image/Gravity.mp4" type="video/mp4" />
-      </video>
-    </v-sheet> -->
-
     <v-row no-gutters>
       <v-col
         cols="12"
@@ -25,22 +12,30 @@
       </v-col>
     </v-row>
 
-    <v-dialog v-model="dialog">
-      <v-btn class="mx-2" fab small color="pink" @click="dialog = false">
-        <v-icon>{{ icons.cross }}</v-icon>
-      </v-btn>
-
-      <v-carousel height="500" hide-delimiter-background v-model="activeImage">
+    <v-dialog v-model="dialog" fullscreen class="card-overlap">
+      <v-carousel
+        hide-delimiters
+        v-model="activeImage"
+        height="100%"
+        class="card-overlap"
+      >
+        <v-btn
+          class="ml-auto ma-2"
+          fab
+          small
+          color="accent"
+          @click="dialog = false"
+        >
+          <v-icon>{{ icons.cross }}</v-icon>
+        </v-btn>
         <template v-slot:prev="{ on, attrs }">
-          <v-icon v-bind="attrs" v-on="on">{{ icons.left }}</v-icon>
+          <v-icon v-bind="attrs" v-on="on" large>{{ icons.left }}</v-icon>
         </template>
         <template v-slot:next="{ on, attrs }">
-          <v-icon v-bind="attrs" v-on="on">{{ icons.right }}</v-icon>
+          <v-icon v-bind="attrs" v-on="on" large>{{ icons.right }}</v-icon>
         </template>
         <v-carousel-item v-for="(slide, i) in gallery" :key="i">
-          <v-row align="center" justify="center">
-            <v-img :src="slide.img" contain height="500" />
-          </v-row>
+          <v-img :src="slide.img" contain height="90%" />
         </v-carousel-item>
       </v-carousel>
     </v-dialog>

@@ -14,12 +14,12 @@
     </div>
     <LazyIndexQuote />
     <v-divider class="my-4"></v-divider>
-    <!-- <h1 class="text-h3 text-center accent--text" id="ClassroomProgrammes">
+    <h1 class="text-h3 text-center accent--text mt-2" id="classroom-programmes">
       Classroom Programmes
     </h1>
     <h2 class="text-center mb-8 font-weight-light">
       Designed to develope a child's seven areas of learning.
-    </h2> -->
+    </h2>
 
     <v-container class="ma-0 bg-image" fluid>
       <v-row no-gutters>
@@ -105,15 +105,9 @@ export default {
   },
 }
 </script>
-<style scoped>
+<style>
 .bg-image {
   background-image: url('@/assets/image/bg/class-bg.jpg');
   background-size: cover;
-}
-.card-overlap {
-  border-radius: 1rem !important;
-  background-color: rgba(253, 242, 248, 0.8) !important;
-  backdrop-filter: blur(10px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
 }
 </style>

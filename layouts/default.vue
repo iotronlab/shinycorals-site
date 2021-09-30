@@ -1,6 +1,12 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" fixed app temporary>
+    <v-navigation-drawer
+      v-model="drawer"
+      fixed
+      app
+      temporary
+      class="card-overlap ma-2"
+    >
       <LazyNavDrawer :socialLinks="socialLinks" :navLinks="navLinks" />
     </v-navigation-drawer>
     <v-app-bar id="nav" fixed app flat class="nav-transparent" extended>
@@ -13,7 +19,7 @@
       <nuxt-link :to="{ name: 'index' }">
         <v-img
           v-if="$vuetify.breakpoint.mdAndDown"
-          :src="require('@/assets/img/shiny_logo.png')"
+          src="/icon.png"
           width="55"
         ></v-img>
       </nuxt-link>
@@ -25,11 +31,7 @@
         v-if="!$vuetify.breakpoint.mdAndDown"
       >
         <nuxt-link :to="{ name: 'index' }">
-          <v-img
-            :src="require('@/assets/img/shiny_logo.png')"
-            width="100"
-            class="mr-6"
-          ></v-img>
+          <v-img src="/icon.png" width="100" class="mr-6"></v-img>
         </nuxt-link>
         <v-btn
           v-for="(item, i) in navLinks"
@@ -123,7 +125,7 @@ export default {
         },
         {
           title: 'CLASSROOM PROGRAMMES',
-          to: '/#ClassroomProgrammes',
+          to: '/#classroom-programmes',
         },
         {
           title: 'Gallery',

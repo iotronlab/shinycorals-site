@@ -105,10 +105,10 @@ export default {
         whatsapp: mdiWhatsapp,
       },
       navLinks: [
-        // {
-        //   title: 'Home',
-        //   to: '/',
-        // },
+        {
+          title: 'Home',
+          to: '/',
+        },
         {
           title: 'About US',
           to: '/about-us',
@@ -124,7 +124,11 @@ export default {
           ],
         },
         {
-          title: 'CLASSROOM PROGRAMMES',
+          title: 'Learning Kits',
+          to: '/#learning-kits',
+        },
+        {
+          title: 'Classroom Programmes',
           to: '/#classroom-programmes',
         },
         {
@@ -140,7 +144,7 @@ export default {
       socialLinks: [
         {
           name: 'Facebook',
-          url: 'https://www.facebook.com/',
+          url: 'https://www.facebook.com/shiny.corals.14',
           icon: mdiFacebook,
         },
         {
@@ -149,7 +153,11 @@ export default {
           icon: mdiWhatsapp,
         },
 
-        { name: 'Google', url: 'https://www.google.com/', icon: mdiGoogle },
+        {
+          name: 'Google',
+          url: 'https://goo.gl/maps/3rXZmxMM6ucoHD4d8',
+          icon: mdiGoogle,
+        },
       ],
     }
   },

@@ -14,10 +14,11 @@
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.18.0",
+    "core-js": "^3.18.1",
     "minify-css-string": "^1.0.0",
     "nuxt": "^2.15.7",
-    "vuetify": "^2.5.5"
+    "vue-gtag": "^1.16.1",
+    "vuetify": "^2.5.9"
   },
   "devDependencies": {
     "@mdi/js": "^5.9.55",
@@ -25,7 +26,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/vuetify": "^1.12.1",
-    "nuxt-gsap-module": "^1.4.0",
+    "nuxt-gsap-module": "^1.5.0",
     "prettier": "^2.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",

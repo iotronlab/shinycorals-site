@@ -9,9 +9,20 @@
       ></v-img>
     </v-sheet>
 
-    <div class="left">
+    <div class="left mb-10">
       <LazyIndexAbout />
     </div>
+
+    <h1 class="text-h3 text-center accent--text mt-2" id="learning-kits">
+      Learning Kits
+    </h1>
+    <h2 class="text-center mb-2 font-weight-light">
+      Preschool Home Schooling kit Program for Your child
+    </h2>
+    <div class="right mb-10">
+      <IndexLearningKit />
+    </div>
+
     <LazyIndexQuote />
     <v-divider class="my-4"></v-divider>
     <h1 class="text-h3 text-center accent--text mt-2" id="classroom-programmes">
